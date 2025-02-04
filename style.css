@@ -10,6 +10,9 @@
 	text-transform: uppercase;
 	font-family: Cabin;
 	line-height: 1.4rem;
+
+	--h1-font: 60px;
+	--h1-height: 120%;
 }
 
 p,li {
@@ -46,7 +49,7 @@ nav{
 
 .button-l{
 	display: flex;
-	height: 56px;
+	height:calc(0.8* var(--h1-font));
 	padding-inline: calc(2*var(--base-size));
 	justify-content: space-between;
 	align-items: center;
@@ -55,7 +58,9 @@ nav{
 	border-radius: 999px;
 	border: 2px solid var(--text-color);
 
-	font-size: var(--base-size);
+	font-size: var(--button-size);
+	font-family: Cabin; 
+	line-height: 300;
 }
 
 .link-list li {
@@ -70,6 +75,7 @@ nav{
 	}
 }
 
+
 /* Link Text - "Cards" - style */
 
 .link-list{
@@ -80,7 +86,7 @@ nav{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 12px;
+	gap: var(--base-size);
 }
 
 
@@ -110,17 +116,19 @@ nav{
 	object-fit: cover;
 	overflow: clip; 
 	width: 40%;
-	height: 50px;
+	height:calc(0.8* var(--h1-font));
 	border-radius: 9999px;
 }
 
 /* Title styles */
 
 h1{
-font-family: Bungee;
-font-size: 60px;
-line-height: 72px;
-font-weight: 400;
+	&>span{
+		font-family: Bungee;
+		font-size: var(--h1-font);
+		line-height: var(--h1-height);
+		font-weight: 400;
+	}
 }
 
 h2{
@@ -131,7 +139,7 @@ font-weight: 600;
 
 .h2-title{
 	display: flex;
-	padding-bottom: 12px;
+	padding-bottom: var(--base-size);
 	justify-content: space-between;
 	border-bottom: 2px solid var(--text-color);
 
@@ -193,4 +201,61 @@ font-weight: 600;
 		margin-bottom: 6px;
 	}
 	
+}
+
+/* .h1-frame{
+	display: flex;
+	flex-direction: column;
+	gap:var(--base-size);
+} */
+
+@media (min-width: 992px){
+	:root{
+		--base-size: 24px;
+		--button-size: 44px;
+		font-size: var(--base-size);
+		--gutter-large: calc(2.75 * var(--base-size));
+		--gutter-small: calc(0.875 * var(--base-size));
+		
+		--h1-font: 150px;
+		background-color: var(--background-color);
+	}
+
+
+
+	.img-box img{
+		width: 40%;
+		height: auto;
+		object-fit: cover;
+		overflow: hidden; 
+	}
+
+
+	.collectives{
+		display: flex;
+	align-items: center;
+	gap: 60px;
+	align-self: stretch;
+	}
+
+	.link-list{
+		font-size:60px;
+		line-height: 72px;
+		width: 60%;
+	}
+
+
+	.button-l{
+		width: 412px;
+		min-width: 300px;
+	}
+
+	.maincontent{
+		padding: 60px;
+		margin: calc(1.82* var(--base-size));
+	}
+
+	.img-frame{
+		width: 20%;
+	}
 }
