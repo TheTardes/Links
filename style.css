@@ -69,9 +69,10 @@ nav{
 	padding-bottom: var(--base-size);
 
 	& a:hover{
-		color: transparent !important;
-		-webkit-text-stroke-width: 2 !important;
-		-webkit-text-stroke-color: var(--text-color) !important;
+		color: var(--content-color);
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		/* -webkit-text-stroke-width: 2 !important;
+		-webkit-text-stroke-color: var(--text-color) !important; */
 	}
 }
 
@@ -221,7 +222,17 @@ font-weight: 600;
 		background-color: var(--background-color);
 	}
 
+.test{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: var(--button-size);
 
+	img{
+		height: 100%;
+		object-fit: cover;
+		overflow: hidden;
+	}
+}
 
 	.img-box img{
 		width: 40%;
