@@ -47,6 +47,18 @@ nav{
 
 /* buttons, links */
 
+.button-secondary{
+		font-family: Bungee;
+		font-size: var(--button-size);
+		font-weight: 400;
+	
+	&:hover{
+			color: transparent;
+			-webkit-text-stroke: 2px var(--text-color);
+		}
+	
+}
+
 .button-l{
 	display: flex;
 	height:calc(0.8* var(--h1-font));
@@ -69,10 +81,8 @@ nav{
 	padding-bottom: var(--base-size);
 
 	& a:hover{
-		color: var(--content-color);
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-		/* -webkit-text-stroke-width: 2 !important;
-		-webkit-text-stroke-color: var(--text-color) !important; */
+		color: transparent;
+		-webkit-text-stroke: 2px var(--text-color);
 	}
 }
 
@@ -143,13 +153,6 @@ font-weight: 600;
 	padding-bottom: var(--base-size);
 	justify-content: space-between;
 	border-bottom: 2px solid var(--text-color);
-
-
-	& a {
-		font-family: Bungee;
-		font-size: var(--button-size);
-		font-weight: 400;
-	}
 }
 
 
