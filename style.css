@@ -2,10 +2,8 @@
 	--base-size: 16px;
 	--button-size: 22px;
 	font-size: var(--base-size);
-
 	--gutter-large: calc(2.75 * var(--base-size));
 	--gutter-small: calc(0.875 * var(--base-size));
-
 	--text-color:black;
 	--background-color:#CAB8FF;
 	--content-color:#EAEAEA;
@@ -18,6 +16,8 @@ p,li {
 	text-transform: none;
 }
 
+/* Gutters */
+
 .gutter-small{
 	padding-bottom: var(--gutter-small);
 }
@@ -25,6 +25,8 @@ p,li {
 .gutter-large{
 	padding-bottom: var(--gutter-large);
 }
+
+
 
 nav{
 	display: flex;
@@ -38,6 +40,9 @@ nav{
 	background-color: var(--content-color);
 
 }
+
+
+/* buttons, links */
 
 .button-l{
 	display: flex;
@@ -53,6 +58,35 @@ nav{
 	font-size: var(--base-size);
 }
 
+.link-list li {
+	border-bottom: 2px solid var(--text-color);
+	align-self: stretch;
+	padding-bottom: var(--base-size);
+
+	& a:hover{
+		color: transparent !important;
+		-webkit-text-stroke-width: 2 !important;
+		-webkit-text-stroke-color: var(--text-color) !important;
+	}
+}
+
+/* Link Text - "Cards" - style */
+
+.link-list{
+	font-family: Bungee;
+	font-size: var(--button-size);
+	font-weight: 400;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+}
+
+
+
+/* idk how to to this img scroll stuff */
+
 /* .img-scroll{
 	display: flex;
 	flex-direction: row;
@@ -60,7 +94,7 @@ nav{
 	gap: 24px;
 } */
 
-.img-box{
+/* .img-box{
 	width: 70%;
 	height: 340px;
 }
@@ -68,8 +102,10 @@ nav{
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-}
+} */
 
+
+/* frame for pic on h1 */
 .img-frame{
 	object-fit: cover;
 	overflow: clip; 
@@ -77,6 +113,8 @@ nav{
 	height: 50px;
 	border-radius: 9999px;
 }
+
+/* Title styles */
 
 h1{
 font-family: Bungee;
@@ -91,6 +129,22 @@ font-size: var(--button-size);
 font-weight: 600;
 }
 
+.h2-title{
+	display: flex;
+	padding-bottom: 12px;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--text-color);
+
+
+	& a {
+		font-family: Bungee;
+		font-size: var(--button-size);
+		font-weight: 400;
+	}
+}
+
+
+/* empty cards */
 .explore-files{
 	border: 2px solid var(--text-color);
 	width: 100%;
@@ -109,73 +163,34 @@ font-weight: 600;
 	display: block;
 }
 .hover-image {
-	
     position: absolute;
     width: 100%;
     height: auto;
     display: none;
 }
-
 .hover-image img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.h2-title{
-	display: flex;
-	padding-bottom: 12px;
-	justify-content: space-between;
-	border-bottom: 2px solid var(--text-color);
 
-
-	& a {
-		font-family: Bungee;
-		font-size: var(--button-size);
-		font-weight: 400;
-	}
-}
-
-.link-list{
-	font-family: Bungee;
-	font-size: var(--button-size);
-	font-weight: 400;
-
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 12px;
-
-	& li {
-		border-bottom: 2px solid var(--text-color);
-		align-self: stretch;
-		padding-bottom: var(--base-size);
-
-		& a:hover{
-			color: transparent !important;
-			-webkit-text-stroke-width: 2 !important;
-			-webkit-text-stroke-color: var(--text-color) !important;
-		}
-	}
-
-	}
-
-
+/* this will probably be deleted */
 
 .text-format{
 	margin-top: calc(0.5* var(--base-size));
-	
+
 	padding: calc(2* var(--base-size));
 	border: 2px solid var(--text-color);
 }
 
 .standart-list{
-		list-style-type: disc;
-		padding-top:calc(0.5* var(--base-size)) ;
-		margin-left: var(--base-size);
+	list-style-type: disc;
+	padding-top:calc(0.5* var(--base-size)) ;
+	margin-left: var(--base-size);
 
-		&>li{
-			margin-bottom: 6px;
-		}
+	&>li{
+		margin-bottom: 6px;
+	}
 	
 }
