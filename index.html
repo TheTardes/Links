@@ -1,36 +1,43 @@
 <html>
-	<head>
-		<title>Links</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="reset.css" rel="stylesheet">
 
-		<!-- css files -->
-		<link href="style.css" rel="stylesheet">
+<head>
+	<title>Links</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="reset.css" rel="stylesheet">
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-	</head>
+	<!-- css files -->
+	<link href="style.css" rel="stylesheet">
+	<script defer src="arena.js"></script>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+
 <body>
 	<section class="maincontent">
-	<header>
-		<nav class="gutter-small">
-			<svg xmlns="http://www.w3.org/2000/svg" width="58" height="44" viewBox="0 0 58 44" fill="none">
-				<path d="M55.7904 12.9221C54.5848 16.1857 53.6669 19.6321 54.255 23.0613C56.2814 34.8773 62.6318 47.9583 42.971 42.0935C40.3077 41.2991 37.5278 40.7049 34.767 41.0249C28.6906 41.7291 22.3688 43.6222 17.5083 43.951C9.4034 44.4992 4.12051 34.2022 1.50635 26.5109C-2.73374 14.0358 1.99816 -2.49948 15.4402 2.08857C20.2331 3.72448 25.0396 5.87504 29.9829 4.77452C44.7703 1.48245 63.2886 -7.376 55.7904 12.9221Z" fill="#CAB8FF"/>
-				<path d="M27.5124 30.564C22.8054 27.8412 16.3744 24.3894 15.5148 19.02C15.5068 18.9703 15.5005 18.9203 15.4961 18.8698C15.3143 16.8135 17.775 15.7007 19.567 14.6758C20.3928 14.2035 21.2069 13.6909 22.0015 13.18C28.475 9.01774 38.0018 13.3853 40.5706 20.6401C42.2894 25.4942 41.2555 30.6198 35.4544 30.6802C32.962 30.7062 29.6699 31.812 27.5124 30.564V30.564Z" fill="#EEFFB8"/>
+		<section>
+			<p id="channel-title"></p>
+			<p id="channel-description"></p>
+		</section>
+		<header>
+			<nav class="gutter-small">
+				<svg xmlns="http://www.w3.org/2000/svg" width="58" height="44" viewBox="0 0 58 44" fill="none">
+					<path d="M55.7904 12.9221C54.5848 16.1857 53.6669 19.6321 54.255 23.0613C56.2814 34.8773 62.6318 47.9583 42.971 42.0935C40.3077 41.2991 37.5278 40.7049 34.767 41.0249C28.6906 41.7291 22.3688 43.6222 17.5083 43.951C9.4034 44.4992 4.12051 34.2022 1.50635 26.5109C-2.73374 14.0358 1.99816 -2.49948 15.4402 2.08857C20.2331 3.72448 25.0396 5.87504 29.9829 4.77452C44.7703 1.48245 63.2886 -7.376 55.7904 12.9221Z" fill="#CAB8FF" />
+					<path d="M27.5124 30.564C22.8054 27.8412 16.3744 24.3894 15.5148 19.02C15.5068 18.9703 15.5005 18.9203 15.4961 18.8698C15.3143 16.8135 17.775 15.7007 19.567 14.6758C20.3928 14.2035 21.2069 13.6909 22.0015 13.18C28.475 9.01774 38.0018 13.3853 40.5706 20.6401C42.2894 25.4942 41.2555 30.6198 35.4544 30.6802C32.962 30.7062 29.6699 31.812 27.5124 30.564V30.564Z" fill="#EEFFB8" />
 				</svg>
-			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-				<g clip-path="url(#clip0_7_83)">
-				<path d="M13.3333 0H7.5C3.35833 0 0 3.35833 0 7.5V13.3333C0 15.175 1.49167 16.6667 3.33333 16.6667H13.3333C15.175 16.6667 16.6667 15.175 16.6667 13.3333V3.33333C16.6667 1.49167 15.175 0 13.3333 0ZM23.3333 16.6667H33.3333C35.175 16.6667 36.6667 15.175 36.6667 13.3333V7.5C36.6667 3.35833 33.3083 0 29.1667 0H23.3333C21.4917 0 20 1.49167 20 3.33333V13.3333C20 15.175 21.4917 16.6667 23.3333 16.6667ZM13.3333 20H3.33333C1.49167 20 0 21.4917 0 23.3333V29.1667C0 33.3083 3.35833 36.6667 7.5 36.6667H13.3333C15.175 36.6667 16.6667 35.175 16.6667 33.3333V23.3333C16.6667 21.4917 15.175 20 13.3333 20ZM39.5117 37.155L35.2783 32.9217C36.1517 31.6033 36.6667 30.0283 36.6667 28.3333C36.6667 23.7383 32.9283 20 28.3333 20C23.7383 20 20 23.7383 20 28.3333C20 32.9283 23.7383 36.6667 28.3333 36.6667C30.0283 36.6667 31.6033 36.1517 32.9217 35.2783L37.155 39.5117C37.48 39.8367 37.9067 40 38.3333 40C38.76 40 39.1867 39.8367 39.5117 39.5117C40.1633 38.86 40.1633 37.8067 39.5117 37.155Z" fill="black"/>
-				</g>
-				<defs>
-				<clipPath id="clip0_7_83">
-				<rect width="40" height="40" fill="white"/>
-				</clipPath>
-				</defs>
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+					<g clip-path="url(#clip0_7_83)">
+						<path d="M13.3333 0H7.5C3.35833 0 0 3.35833 0 7.5V13.3333C0 15.175 1.49167 16.6667 3.33333 16.6667H13.3333C15.175 16.6667 16.6667 15.175 16.6667 13.3333V3.33333C16.6667 1.49167 15.175 0 13.3333 0ZM23.3333 16.6667H33.3333C35.175 16.6667 36.6667 15.175 36.6667 13.3333V7.5C36.6667 3.35833 33.3083 0 29.1667 0H23.3333C21.4917 0 20 1.49167 20 3.33333V13.3333C20 15.175 21.4917 16.6667 23.3333 16.6667ZM13.3333 20H3.33333C1.49167 20 0 21.4917 0 23.3333V29.1667C0 33.3083 3.35833 36.6667 7.5 36.6667H13.3333C15.175 36.6667 16.6667 35.175 16.6667 33.3333V23.3333C16.6667 21.4917 15.175 20 13.3333 20ZM39.5117 37.155L35.2783 32.9217C36.1517 31.6033 36.6667 30.0283 36.6667 28.3333C36.6667 23.7383 32.9283 20 28.3333 20C23.7383 20 20 23.7383 20 28.3333C20 32.9283 23.7383 36.6667 28.3333 36.6667C30.0283 36.6667 31.6033 36.1517 32.9217 35.2783L37.155 39.5117C37.48 39.8367 37.9067 40 38.3333 40C38.76 40 39.1867 39.8367 39.5117 39.5117C40.1633 38.86 40.1633 37.8067 39.5117 37.155Z" fill="black" />
+					</g>
+					<defs>
+						<clipPath id="clip0_7_83">
+							<rect width="40" height="40" fill="white" />
+						</clipPath>
+					</defs>
 				</svg>
-			<!-- <ul>
+				<!-- <ul>
 				<li><a>About</a></li>
 				<li>
 					<a>History</a>
@@ -39,100 +46,101 @@
 				<li><a>Guides</a></li>
 				<li><a>Communities</a></li>
 			</ul> -->
-		</nav>
-		<h1 class="gutter-large">
-			<span>Riso</span>
-			<span><img class="img-frame" src="Assets/art-1-full.jpg"></span>
-			<span>ink and happy flaws</span>
-			<span>
-				<a class="button-l">Explore <svg xmlns="http://www.w3.org/2000/svg" width="44" height="22" viewBox="0 0 44 22" fill="none">
-				<g clip-path="url(#clip0_7_78)">
-				<path d="M2.66969 10.5292C12.5488 12.2782 24.9645 10.6161 34.936 11.2629M30.3963 18.4833C33.2134 14.5651 37.9533 14.1801 41.3303 11.0308C38.0809 9.66899 31.6184 6.60549 29.5658 3.51669" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-				</g>
-				<defs>
-				<clipPath id="clip0_7_78">
-				<rect width="22" height="44" fill="white" transform="matrix(0 1 -1 0 44 0)"/>
-				</clipPath>
-				</defs>
-				</svg>
-				</a>	
-			</span>
-		</h1>
-	</header>
-	<article>
-	<section  class="gutter-large img-scroll test">
-		<img  src="Assets/Risoland.gif" alt="Risoland gif">
-		<img  src="Assets/Stickers.jpeg" alt="riso stickers">
-		<img  src="Assets/Stickers.jpeg" alt="riso stickers">
-		<img  src="Assets/Stickers.jpeg" alt="riso stickers">
-	</section>
-	<section class="gutter-large">
-		<h2 class="gutter-small">Explore the History</h2>
-		<section>
-			<a class="explore-files" href="Assets/Introduction to Risograph Printing.pdf">
-				Introduction
-				<picture class="hover-image">
-				<img src="Assets/art-1-full.jpg">
-				</picture>
-			</a>
-		</section>
-	</section>
-
-
-	<section class="gutter-large">
-		<section class="gutter-small h2-title">
-			<h2>Collectives</h2>
-			<a class="button-secondary">View All +</a>
-		</section>
-
-		<section class="collecives">
-			<picture class="img-box">
-				<img src="Assets/riso-textures.jpg" alt="riso textures">
-			</picture>
-			<ul class="link-list">
-				<li>
-					<a href="https://kittybugpress.xyz/">Kittybug Press
+			</nav>
+			<h1 class="gutter-large">
+				<span>Riso</span>
+				<span><img class="img-frame" src="Assets/art-1-full.jpg"></span>
+				<span>ink and happy flaws</span>
+				<span>
+					<a class="button-l">Explore <svg xmlns="http://www.w3.org/2000/svg" width="44" height="22" viewBox="0 0 44 22" fill="none">
+							<g clip-path="url(#clip0_7_78)">
+								<path d="M2.66969 10.5292C12.5488 12.2782 24.9645 10.6161 34.936 11.2629M30.3963 18.4833C33.2134 14.5651 37.9533 14.1801 41.3303 11.0308C38.0809 9.66899 31.6184 6.60549 29.5658 3.51669" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+							</g>
+							<defs>
+								<clipPath id="clip0_7_78">
+									<rect width="22" height="44" fill="white" transform="matrix(0 1 -1 0 44 0)" />
+								</clipPath>
+							</defs>
+						</svg>
 					</a>
-				</li>
-				<li>
-					<a href="https://secretrisoclub.com/">Secret Riso club</a>
-				</li>
-				<li>
-					<a href="https://risottostudio.com/">Risotto Stuio</a>
-				</li>
-			</ul>
-		</section>
-	</section>
-
-	<section class="gutter-large">
-		<h2 class="gutter-small">How to's</h2>
-		<section>
-			<h3>HOW TO CREATE RISO ANIMATIONS</h3>
-			<section class="text-format"> <p>
-				Creating animations with the risograph printer has become a hobby and obsession of Alex Barsky and Zack Lydon at Zine Hug. Any video can be transformed into a risograph animation. This is the general process for how to create a riso animation: 
-			</p>
-				<ul class="standart-list">
-					<li>Export video into an image sequence</li>
-					<li>Create a contact sheet from that image sequence
-					</li>
-					<li>Print the contact sheet with the risograph printer</li>
-					<li>Scan the contact sheet</li>
-					<li>Re-sequence the printed images into a digital video</li>
-				</ul>
+				</span>
+			</h1>
+		</header>
+		<article>
+			<section class="gutter-large img-scroll">
+				<img src="Assets/Risoland.gif" alt="Risoland gif">
+				<img src="Assets/Stickers.jpeg" alt="riso stickers">
+				<img src="Assets/Stickers.jpeg" alt="riso stickers">
+				<img src="Assets/Stickers.jpeg" alt="riso stickers">
 			</section>
-		</section>
+			<section class="gutter-large">
+				<h2 class="gutter-small">Explore the History</h2>
+				<section>
+					<a class="explore-files" href="Assets/Introduction to Risograph Printing.pdf">
+						Introduction
+						<picture class="hover-image">
+							<img src="Assets/art-1-full.jpg">
+						</picture>
+					</a>
+				</section>
+			</section>
+
+
+			<section class="gutter-large">
+				<section class="gutter-small h2-title">
+					<h2> Collectives</h2>
+					<a class="button-secondary">View All +</a>
+				</section>
+
+				<section class="collectives">
+					<ul class="link-list">
+						<li>
+							<a href="https://kittybugpress.xyz/">Kittybug Press
+							</a>
+						</li>
+						<li>
+							<a href="https://secretrisoclub.com/">Secret Riso club</a>
+						</li>
+						<li>
+							<a href="https://risottostudio.com/">Risotto Stuio</a>
+						</li>
+					</ul>
+					<picture class="img-box">
+						<img src="Assets/riso-textures.jpg" alt="riso textures">
+					</picture>
+				</section>
+			</section>
+
+			<section class="gutter-large">
+				<h2 class="gutter-small">How to's</h2>
+				<section>
+					<h3>HOW TO CREATE RISO ANIMATIONS</h3>
+					<section class="text-format">
+						<p>
+							Creating animations with the risograph printer has become a hobby and obsession of Alex Barsky and Zack Lydon at Zine Hug. Any video can be transformed into a risograph animation. This is the general process for how to create a riso animation:
+						</p>
+						<ul class="standart-list">
+							<li>Export video into an image sequence</li>
+							<li>Create a contact sheet from that image sequence
+							</li>
+							<li>Print the contact sheet with the risograph printer</li>
+							<li>Scan the contact sheet</li>
+							<li>Re-sequence the printed images into a digital video</li>
+						</ul>
+					</section>
+				</section>
+			</section>
+
+			<section class="gutter-large">
+				<h2 class="gutter-small">Tutorials</h2>
+				<section>
+					<iframe width="360" height="300" src="https://www.youtube.com/embed/1rfwKuXIhcE?si=mFzPh8BKY7OCV8em" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</section>
+			</section>
+
+
+		</article>
 	</section>
-
-	<section class="gutter-large">
-		<h2 class="gutter-small">Tutorials</h2>
-		<section>
-			<iframe width="360" height="300" src="https://www.youtube.com/embed/1rfwKuXIhcE?si=mFzPh8BKY7OCV8em" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		</section>
-	</section>
-
-
-	</article>
-</section>
 </body>
 
 </html>

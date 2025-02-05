@@ -1,12 +1,12 @@
-:root{
+:root {
 	--base-size: 16px;
 	--button-size: 22px;
 	font-size: var(--base-size);
 	--gutter-large: calc(2.75 * var(--base-size));
 	--gutter-small: calc(0.875 * var(--base-size));
-	--text-color:black;
-	--background-color:#CAB8FF;
-	--content-color:#EAEAEA;
+	--text-color: black;
+	--background-color: #CAB8FF;
+	--content-color: #EAEAEA;
 	text-transform: uppercase;
 	font-family: Cabin;
 	line-height: 1.4rem;
@@ -15,30 +15,30 @@
 	--h1-height: 120%;
 }
 
-p,li {
+p,
+li {
 	text-transform: none;
 }
-/* test */
 
 /* Gutters */
 
-.gutter-small{
+.gutter-small {
 	padding-bottom: var(--gutter-small);
 }
 
-.gutter-large{
+.gutter-large {
 	padding-bottom: var(--gutter-large);
 }
 
 
 
-nav{
+nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.maincontent{
+.maincontent {
 	padding: 12px 20px;
 	border: 4px solid var(--text-color);
 	background-color: var(--content-color);
@@ -48,21 +48,21 @@ nav{
 
 /* buttons, links */
 
-.button-secondary{
-		font-family: Bungee;
-		font-size: var(--button-size);
-		font-weight: 400;
-	
-	&:hover{
-			color: transparent;
-			-webkit-text-stroke: 2px var(--text-color);
-		}
-	
+.button-secondary {
+	font-family: Bungee;
+	font-size: var(--button-size);
+	font-weight: 400;
+
+	&:hover {
+		color: transparent;
+		-webkit-text-stroke: 2px var(--text-color);
+	}
+
 }
 
-.button-l{
+.button-l {
 	display: flex;
-	height:calc(0.8* var(--h1-font));
+	height: calc(0.8* var(--h1-font));
 	padding-inline: calc(2*var(--base-size));
 	justify-content: space-between;
 	align-items: center;
@@ -72,7 +72,7 @@ nav{
 	border: 2px solid var(--text-color);
 
 	font-size: var(--button-size);
-	font-family: Cabin; 
+	font-family: Cabin;
 	line-height: 300;
 }
 
@@ -81,7 +81,7 @@ nav{
 	align-self: stretch;
 	padding-bottom: var(--base-size);
 
-	& a:hover{
+	& a:hover {
 		color: transparent;
 		-webkit-text-stroke: 2px var(--text-color);
 	}
@@ -90,7 +90,7 @@ nav{
 
 /* Link Text - "Cards" - style */
 
-.link-list{
+.link-list {
 	font-family: Bungee;
 	font-size: var(--button-size);
 	font-weight: 400;
@@ -124,18 +124,18 @@ nav{
 
 
 /* frame for pic on h1 */
-.img-frame{
+.img-frame {
 	object-fit: cover;
-	overflow: clip; 
+	overflow: clip;
 	width: 40%;
-	height:calc(0.8* var(--h1-font));
+	height: calc(0.8* var(--h1-font));
 	border-radius: 9999px;
 }
 
 /* Title styles */
 
-h1{
-	&>span{
+h1 {
+	&>span {
 		font-family: Bungee;
 		font-size: var(--h1-font);
 		line-height: var(--h1-height);
@@ -143,13 +143,13 @@ h1{
 	}
 }
 
-h2{
-font-family: Cabin;
-font-size: var(--button-size);
-font-weight: 600;
+h2 {
+	font-family: Cabin;
+	font-size: var(--button-size);
+	font-weight: 600;
 }
 
-.h2-title{
+.h2-title {
 	display: flex;
 	padding-bottom: var(--base-size);
 	justify-content: space-between;
@@ -158,7 +158,7 @@ font-weight: 600;
 
 
 /* empty cards */
-.explore-files{
+.explore-files {
 	border: 2px solid var(--text-color);
 	width: 100%;
 	height: 460px;
@@ -169,19 +169,21 @@ font-weight: 600;
 	align-items: center;
 	background-color: none;
 	position: relative;
-	overflow: clip; 
+	overflow: clip;
 }
 
 :hover .hover-image {
 	display: block;
 }
+
 .hover-image {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    display: none;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	display: none;
 }
-.hover-image img{
+
+.hover-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -190,87 +192,101 @@ font-weight: 600;
 
 /* this will probably be deleted */
 
-.text-format{
+.text-format {
 	margin-top: calc(0.5* var(--base-size));
 
 	padding: calc(2* var(--base-size));
 	border: 2px solid var(--text-color);
 }
 
-.standart-list{
+.standart-list {
 	list-style-type: disc;
-	padding-top:calc(0.5* var(--base-size)) ;
+	padding-top: calc(0.5* var(--base-size));
 	margin-left: var(--base-size);
 
-	&>li{
+	&>li {
 		margin-bottom: 6px;
 	}
-	
+
 }
 
-/* .h1-frame{
-	display: flex;
-	flex-direction: column;
-	gap:var(--base-size);
-} */
 
-@media (min-width: 992px){
-	:root{
+@media (min-width: 992px) {
+	:root {
 		--base-size: 24px;
 		--button-size: 44px;
 		font-size: var(--base-size);
-		--gutter-large: calc(2.75 * var(--base-size));
-		--gutter-small: calc(0.875 * var(--base-size));
-		
+		--gutter-large: 140px;
+		--gutter-small: 70px;
+
 		--h1-font: 150px;
 		background-color: var(--background-color);
 	}
 
-.test{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: var(--button-size);
 
-	img{
+	.collectives {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+		align-self: stretch;
+	}
+
+	.link-list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		height: fit-content;
+	}
+
+	.img-box {
+		flex: 1 0 0;
+		align-self: stretch;
+
+	}
+
+	.img-box img {
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		overflow: hidden;
 	}
-}
 
-	.img-box img{
-		width: 40%;
-		height: auto;
-		object-fit: cover;
-		overflow: hidden; 
+
+	.img-scroll {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: var(--button-size);
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			overflow: hidden;
+		}
 	}
 
 
-	.collectives{
-		display: flex;
-	align-items: center;
-	gap: 60px;
-	align-self: stretch;
-	}
 
-	.link-list{
-		font-size:60px;
+
+
+	.link-list {
+		font-size: 60px;
 		line-height: 72px;
 		width: 60%;
 	}
 
 
-	.button-l{
+	.button-l {
 		width: 412px;
 		min-width: 300px;
 	}
 
-	.maincontent{
+	.maincontent {
 		padding: 60px;
 		margin: calc(1.82* var(--base-size));
 	}
 
-	.img-frame{
+	.img-frame {
 		width: 20%;
 	}
 }
