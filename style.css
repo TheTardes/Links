@@ -3,212 +3,70 @@
 	--button-size: 22px;
 	font-size: var(--base-size);
 	--gutter-large: calc(2.75 * var(--base-size));
-	--gutter-small: calc(0.875 * var(--base-size));
-	--text-color: black;
-	--background-color: #CAB8FF;
-	--content-color: #EAEAEA;
+	--black: #222222;
+	--white: #ffffff;
+	--background-color: #EAEAEA;
+	background-color: var(--background-color);
+	--primary-color: #4417F3;
+	--secondary-color: #FFD446;
 	text-transform: uppercase;
 	font-family: Cabin;
 	line-height: 1.4rem;
+	font-weight: 400;
 
 	--h1-font: 60px;
 	--h1-height: 120%;
 }
 
-p,
-li {
-	text-transform: none;
+h1 {
+	font-family: Bungee;
+	line-height: 60px;
+	font-size: 44px;
 }
-
-/* Gutters */
-
-.gutter-small {
-	padding-bottom: var(--gutter-small);
-}
-
-.gutter-large {
-	padding-bottom: var(--gutter-large);
-}
-
-
 
 nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
 
-.maincontent {
-	padding: 12px 20px;
-	border: 4px solid var(--text-color);
-	background-color: var(--content-color);
+	padding-inline: 24px;
+	height: 60px;
+	font-size: var(--base-size);
+	background-color: var(--primary-color);
 
-}
-
-
-/* buttons, links */
-
-.button-secondary {
-	font-family: Bungee;
-	font-size: var(--button-size);
-	font-weight: 400;
-
-	&:hover {
-		color: transparent;
-		-webkit-text-stroke: 2px var(--text-color);
-	}
-
-}
-
-.button-l {
-	display: flex;
-	height: calc(0.8* var(--h1-font));
-	padding-inline: calc(2*var(--base-size));
-	justify-content: space-between;
-	align-items: center;
-	align-self: stretch;
-
-	border-radius: 999px;
-	border: 2px solid var(--text-color);
-
-	font-size: var(--button-size);
-	font-family: Cabin;
-	line-height: 300;
-}
-
-.link-list li {
-	border-bottom: 2px solid var(--text-color);
-	align-self: stretch;
-	padding-bottom: var(--base-size);
-
-	& a:hover {
-		color: transparent;
-		-webkit-text-stroke: 2px var(--text-color);
+	a {
+		color: var(--white);
 	}
 }
 
 
-/* Link Text - "Cards" - style */
+.grid-pattern {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: var(--black);
+	gap: 4px;
 
-.link-list {
-	font-family: Bungee;
-	font-size: var(--button-size);
-	font-weight: 400;
+	&>:not(.h1-grid) {
+		aspect-ratio: 1;
+	}
 
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: var(--base-size);
-}
+	&>* {
+		background: var(--background-color);
+	}
 
+	& picture {
+		max-width: 100%;
+	}
 
+	& .h1-grid {
+		grid-column: span 3 / span 3;
+		aspect-ratio: 3;
 
-/* idk how to to this img scroll stuff */
-
-/* .img-scroll{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 24px;
-} */
-
-/* .img-box{
-	width: 70%;
-	height: 340px;
-}
-.img-box img{
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-} */
-
-
-/* frame for pic on h1 */
-.img-frame {
-	object-fit: cover;
-	overflow: clip;
-	width: 40%;
-	height: calc(0.8* var(--h1-font));
-	border-radius: 9999px;
-}
-
-/* Title styles */
-
-h1 {
-	&>span {
-		font-family: Bungee;
-		font-size: var(--h1-font);
-		line-height: var(--h1-height);
-		font-weight: 400;
 	}
 }
 
-h2 {
-	font-family: Cabin;
-	font-size: var(--button-size);
-	font-weight: 600;
-}
-
-.h2-title {
-	display: flex;
-	padding-bottom: var(--base-size);
-	justify-content: space-between;
-	border-bottom: 2px solid var(--text-color);
-}
 
 
-/* empty cards */
-.explore-files {
-	border: 2px solid var(--text-color);
-	width: 100%;
-	height: 460px;
-	display: flex;
-	height: 460px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: none;
-	position: relative;
-	overflow: clip;
-}
-
-:hover .hover-image {
-	display: block;
-}
-
-.hover-image {
-	position: absolute;
-	width: 100%;
-	height: auto;
-	display: none;
-}
-
-.hover-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-
-/* this will probably be deleted */
-
-.text-format {
-	margin-top: calc(0.5* var(--base-size));
-
-	padding: calc(2* var(--base-size));
-	border: 2px solid var(--text-color);
-}
-
-.standart-list {
-	list-style-type: disc;
-	padding-top: calc(0.5* var(--base-size));
-	margin-left: var(--base-size);
-
-	&>li {
-		margin-bottom: 6px;
-	}
-
-}
 
 
 @media (min-width: 992px) {
@@ -223,70 +81,14 @@ h2 {
 		background-color: var(--background-color);
 	}
 
+	.grid-pattern {
+		grid-template-columns: repeat(6, 1fr);
 
-	.collectives {
-		display: flex;
-		align-items: center;
-		gap: 60px;
-		align-self: stretch;
-	}
+		& .h1-grid {
+			grid-column: span 6 / span 6;
+			aspect-ratio: 6;
 
-	.link-list {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 24px;
-		height: fit-content;
-	}
-
-	.img-box {
-		flex: 1 0 0;
-		align-self: stretch;
-
-	}
-
-	.img-box img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		overflow: hidden;
-	}
-
-
-	.img-scroll {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap: var(--button-size);
-
-		img {
-			height: 100%;
-			object-fit: cover;
-			overflow: hidden;
 		}
 	}
 
-
-
-
-
-	.link-list {
-		font-size: 60px;
-		line-height: 72px;
-		width: 60%;
-	}
-
-
-	.button-l {
-		width: 412px;
-		min-width: 300px;
-	}
-
-	.maincontent {
-		padding: 60px;
-		margin: calc(1.82* var(--base-size));
-	}
-
-	.img-frame {
-		width: 20%;
-	}
 }
