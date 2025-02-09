@@ -21,9 +21,9 @@ let renderBlock = (block) => {
 	if (block.image) {
 	  linkItem = `
 		<picture>
-		  <source media="(max-width: 428px)" srcset="${block.image.thumb.url}">
-		  <source media="(max-width: 640px)" srcset="${block.image.large.url}">
-		  <img src="${block.image.original.url}">
+		  <source media="(max-width: 428px)" srcset="${block.image.thumb.url}"/>
+		  <source media="(max-width: 640px)" srcset="${block.image.large.url}"/>
+		  <img src="${block.image.original.url}"/>
 		</picture>`;
 	} else {
 	  linkItem = `
