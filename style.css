@@ -9,19 +9,25 @@
 	background-color: var(--background-color);
 	--primary-color: #4417F3;
 	--secondary-color: #FFD446;
+	--decorative-font: Bungee;
 	text-transform: uppercase;
 	font-family: Cabin;
-	line-height: 1.4rem;
-	font-weight: 400;
+	font-weight: 300;
+
+	--padding-blocks: calc(1.25* var(--base-size));
 
 	--h1-font: 60px;
 	--h1-height: 120%;
+	
 }
 
 h1 {
-	font-family: Bungee;
+	font-family: var(--decorative-font);
 	line-height: 60px;
 	font-size: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 nav {
@@ -40,11 +46,49 @@ nav {
 }
 
 
+.multiply {
+	mix-blend-mode: multiply;
+  }
+  
+  .mask {
+	-webkit-mask-image: url('https://i.ibb.co/SyYhswD/Riso-Mask-Black.png');
+	mask-image: url('https://i.ibb.co/SyYhswD/Riso-Mask-Black.png');
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+  /*   background: url('https://i.ibb.co/VMb4KWH/textured-paper.png'); */
+	background: url('https://i.ibb.co/Sf8sH9b/textured-paper-light.png');
+  }
+
+.description {
+	margin-inline: 20px;
+	margin-block: 56px;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 46px;
+	text-transform: none;
+	text-wrap: pretty;
+
+	&>span {
+		color: var(--primary-color);
+		font-weight: 600;
+	}
+}
+
+.line-blue {
+	background-color: var(--primary-color);
+	height: 60px;
+}
+
+
+/* Grids */
+
+
 .grid-pattern {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	background-color: var(--black);
 	gap: 4px;
+
 
 	&>:not(.h1-grid) {
 		aspect-ratio: 1;
@@ -65,7 +109,7 @@ nav {
 	}
 }
 
-.collection-all{
+.collection-all {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	background-color: var(--black);
@@ -80,7 +124,28 @@ nav {
 	}
 }
 
+/* block styles */
 
+.textlink-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secondary-color);
+	font-size: var(--button-size);
+	font-family: var(--decorative-font);
+	text-align: center;
+	
+}
+
+.info-block {
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-inline: var(--padding-blocks);
+	overflow: hidden; 
+	/* I will look at it later */
+}
 
 
 
@@ -106,16 +171,16 @@ nav {
 		}
 	}
 
-	.collection-all{
+	.collection-all {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		background-color: var(--black);
 		gap: 4px;
-	
+
 		&>* {
 			background: var(--background-color);
 		}
-	
+
 		& li * {
 			max-width: 100%;
 		}
