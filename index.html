@@ -40,25 +40,30 @@
 			<figure class="grid-pattern">
 				<span class="info-block"><p> Explore and find important stuff</p></span>
 				<a class="textlink-block">About</a>
-				<picture>
-					<img src="/Assets/Group 2.svg">
-				</picture>
-				<picture>
-					<img src="/Assets/art-1-full.jpg">
-				</picture>
-				<picture><img src="/Assets/art-1-full.jpg"></picture>
+				<!-- source: https://codepen.io/crownedfoxes/pen/LYXMBEZ -->
+				<div class="mask-container">
+					<div class='mask'>
+					  <svg height="400" width="400">
+						<circle cx="245" cy="220" r="100" fill="#5E7DCD" class='multiply' />
+						<circle cx="120" cy="220" r="100" fill="#5EBB63" class='multiply' />
+						<circle cx="180" cy="120" r="100" fill="#F7DE5E" class='multiply' />
+					  </svg>
+					</div>
+				  </div>
+				  <picture class="mask-container block-img"><img class="mask-shape1" height="400" width="400" src="/Assets/shapeslime.svg"></picture>
+				<picture class="mask-container block-img"><img  height="400" width="400" src="/Assets/smile.svg"></picture>
 				<a class="textlink-block">Guides</a>
 				
-				<h1 class="h1-grid">
+				<h1 class="h1-grid mask-container">
 					Risograph
 				</h1>
 
-				<picture><img src="/Assets/art-1-full.jpg"></picture>
+				<picture class="mask-container"><img src="/Assets/print.gif"></picture>
 				<span class="info-block"><p> Riso is a printing method</p></span>
 				<a class="textlink-block">Groups</a>
-				<picture><img src="/Assets/art-1-full.jpg"></picture>
+				<picture class="mask-container block-img"><img class="mask-shape2" src="/Assets/shapes.svg"></picture>
 				<a class="textlink-block"> Samples</a>
-				<span class="info-block"><p>42 block of materials</p></span>
+				<span class="info-block"><p>42 blocks of material</p></span>
 
 			</figure>
 
@@ -76,33 +81,34 @@
 		<figure id="channel-blocks" class="collection-all">
 		</figure>
 
-		<ul>
+		<ul class="list">
 			<li>
 				<a>
-					<svg></svg>
+					<div></div>
 					<p>Start Riso</p>
 				</a>
 			</li>
 			<li>
 				<a>
-					<svg></svg>
+					<div></div>
 					<p>Learn Riso</p>
 				</a>
 			</li>
 			<li>
 				<a>
-					<svg></svg>
+					<div></div>
 					<p>Make Riso</p>
 				</a>
 			</li>
 			<li>
 				<a>
-					<svg></svg>
+					<div></div>
 					<p>Talk Riso</p>
 				</a>
 			</li>
 		</ul>
 	</article>
+
 
 	<footer>
 		<date>2025</date>
