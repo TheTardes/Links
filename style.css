@@ -197,6 +197,10 @@ nav {
 	padding-inline: var(--padding-blocks);
 }
 
+.img-contain{
+	object-fit: contain;
+}
+
 .textlink-block {
 	display: flex;
 	justify-content: center;
