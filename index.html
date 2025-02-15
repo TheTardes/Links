@@ -7,6 +7,7 @@
 
 	<!-- css files -->
 	<link href="style.css" rel="stylesheet">
+	<link href="print.css" rel="stylesheet">
 	<script defer src="arena.js"></script>
 
 	<!-- Fonts -->
@@ -96,9 +97,16 @@
 		<section class="h2-titles">
 			<h2>Find Random Resource</h2>
 			<section class="h2-blocks">
-				<button><a>Print</a></button>
-				<div></div>
-			</section>
+				<button onclick="printRandomBlock()">Print</button>
+				
+				<div id="slot">
+				  <div id="paper-holder">
+					<div id="paper">
+					</div>
+				  </div>
+				</div>
+			  </section>
+		
 		</section>
 
 		<section class="h2-titles">
@@ -107,9 +115,17 @@
 				<ul class="list">
 					<li>
 						<a>
-							<div></div>
-							<p>Start Riso</p>
+							<div class="left">
+								<div></div>
+								<p>Start Riso</p>
+							</div>
+
+							<div class="circles">
+								<div></div>
+								<div></div>
+							</div>
 						</a>
+
 					</li>
 					<li>
 						<a>
