@@ -80,8 +80,8 @@
 	<article>
 		<div class="description">
 			<p>A hub for Risograph printing—<span>tutorials,</span> print <span>samples,</span> studio <span>links,</span> and a gateway to self-publishing and zine-making.</p>
-			<button>
-				<a>Start Exploring <svg xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50" fill="none">
+			<button class="button">
+				Start Exploring <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
 						<g clip-path="url(#clip0_82_41092)">
 							<path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
 						</g>
@@ -90,14 +90,14 @@
 								<rect width="50" height="100" fill="white" transform="matrix(0 1 -1 0 100 0)" />
 							</clipPath>
 						</defs>
-					</svg> </a>
+					</svg> 
 			</button>
 		</div>
 
 		<section class="h2-titles">
 			<h2>Find Random Resource</h2>
 			<section class="h2-blocks">
-				<button onclick="printRandomBlock()">Print</button>
+				<button class="button" onclick="printRandomBlock()">Print</button>
 				
 				<div id="slot">
 				  <div id="paper-holder">
@@ -113,8 +113,8 @@
 			<h2>Your Learning Journey</h2>
 			<section class="h2-blocks">
 				<ul class="list">
-					<li>
-						<a>
+					<li class="list-open">
+						<button>
 							<div class="left">
 								<div></div>
 								<p>Start Riso</p>
@@ -123,27 +123,91 @@
 							<div class="circles">
 								<div></div>
 								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
 							</div>
-						</a>
+						</button>
+						<picture>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</picture>
+					</li>
+					<li class="list-closed">
+						<button>
+							<div class="left">
+								<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+									<path d="M39 22C39 22.541 38.7851 23.0599 38.4025 23.4425C38.0199 23.8251 37.501 24.04 36.96 24.04H24.04V36.96C24.04 37.501 23.8251 38.0199 23.4425 38.4025C23.0599 38.7851 22.541 39 22 39C21.459 39 20.9401 38.7851 20.5575 38.4025C20.1749 38.0199 19.96 37.501 19.96 36.96V24.04H7.04C6.49896 24.04 5.98008 23.8251 5.5975 23.4425C5.21493 23.0599 5 22.541 5 22C5 21.459 5.21493 20.9401 5.5975 20.5575C5.98008 20.1749 6.49896 19.96 7.04 19.96H19.96V7.04C19.96 6.49896 20.1749 5.98008 20.5575 5.5975C20.9401 5.21493 21.459 5 22 5C22.541 5 23.0599 5.21493 23.4425 5.5975C23.8251 5.98008 24.04 6.49896 24.04 7.04V19.96H36.96C37.501 19.96 38.0199 20.1749 38.4025 20.5575C38.7851 20.9401 39 21.459 39 22Z" fill="white"/>
+									</svg>
+								<p>Start Riso</p>
+							</div>
 
+							<div class="circles">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</button>
 					</li>
-					<li>
-						<a>
-							<div></div>
-							<p>Learn Riso</p>
-						</a>
+
+					<li class="list-closed">
+						<button>
+							<div class="left">
+								<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+									<path d="M39 22C39 22.541 38.7851 23.0599 38.4025 23.4425C38.0199 23.8251 37.501 24.04 36.96 24.04H24.04V36.96C24.04 37.501 23.8251 38.0199 23.4425 38.4025C23.0599 38.7851 22.541 39 22 39C21.459 39 20.9401 38.7851 20.5575 38.4025C20.1749 38.0199 19.96 37.501 19.96 36.96V24.04H7.04C6.49896 24.04 5.98008 23.8251 5.5975 23.4425C5.21493 23.0599 5 22.541 5 22C5 21.459 5.21493 20.9401 5.5975 20.5575C5.98008 20.1749 6.49896 19.96 7.04 19.96H19.96V7.04C19.96 6.49896 20.1749 5.98008 20.5575 5.5975C20.9401 5.21493 21.459 5 22 5C22.541 5 23.0599 5.21493 23.4425 5.5975C23.8251 5.98008 24.04 6.49896 24.04 7.04V19.96H36.96C37.501 19.96 38.0199 20.1749 38.4025 20.5575C38.7851 20.9401 39 21.459 39 22Z" fill="white"/>
+									</svg>								<p>Learn Riso</p>
+							</div>
+							<div class="circles">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</button>
 					</li>
-					<li>
-						<a>
-							<div></div>
-							<p>Make Riso</p>
-						</a>
+					<li class="list-closed">
+						<button>
+							<div class="left">
+								<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+									<path d="M39 22C39 22.541 38.7851 23.0599 38.4025 23.4425C38.0199 23.8251 37.501 24.04 36.96 24.04H24.04V36.96C24.04 37.501 23.8251 38.0199 23.4425 38.4025C23.0599 38.7851 22.541 39 22 39C21.459 39 20.9401 38.7851 20.5575 38.4025C20.1749 38.0199 19.96 37.501 19.96 36.96V24.04H7.04C6.49896 24.04 5.98008 23.8251 5.5975 23.4425C5.21493 23.0599 5 22.541 5 22C5 21.459 5.21493 20.9401 5.5975 20.5575C5.98008 20.1749 6.49896 19.96 7.04 19.96H19.96V7.04C19.96 6.49896 20.1749 5.98008 20.5575 5.5975C20.9401 5.21493 21.459 5 22 5C22.541 5 23.0599 5.21493 23.4425 5.5975C23.8251 5.98008 24.04 6.49896 24.04 7.04V19.96H36.96C37.501 19.96 38.0199 20.1749 38.4025 20.5575C38.7851 20.9401 39 21.459 39 22Z" fill="white"/>
+									</svg>								<p>Make Riso</p>
+							</div>
+
+							<div class="circles">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</button>
 					</li>
-					<li>
-						<a>
-							<div></div>
-							<p>Talk Riso</p>
-						</a>
+					<li class="list-closed">
+						<button>
+							<div class="left">
+								<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+									<path d="M39 22C39 22.541 38.7851 23.0599 38.4025 23.4425C38.0199 23.8251 37.501 24.04 36.96 24.04H24.04V36.96C24.04 37.501 23.8251 38.0199 23.4425 38.4025C23.0599 38.7851 22.541 39 22 39C21.459 39 20.9401 38.7851 20.5575 38.4025C20.1749 38.0199 19.96 37.501 19.96 36.96V24.04H7.04C6.49896 24.04 5.98008 23.8251 5.5975 23.4425C5.21493 23.0599 5 22.541 5 22C5 21.459 5.21493 20.9401 5.5975 20.5575C5.98008 20.1749 6.49896 19.96 7.04 19.96H19.96V7.04C19.96 6.49896 20.1749 5.98008 20.5575 5.5975C20.9401 5.21493 21.459 5 22 5C22.541 5 23.0599 5.21493 23.4425 5.5975C23.8251 5.98008 24.04 6.49896 24.04 7.04V19.96H36.96C37.501 19.96 38.0199 20.1749 38.4025 20.5575C38.7851 20.9401 39 21.459 39 22Z" fill="white"/>
+									</svg>								<p>Talk Riso</p>
+							</div>
+
+							<div class="circles">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</button>
 					</li>
 				</ul>
 
