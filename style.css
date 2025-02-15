@@ -131,12 +131,15 @@ button{
 .grid-pattern {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	background-color: var(--black);
-	gap: 4px;
+
+	margin-inline: var(--padding-blocks);
+	
 
 
 	&>:not(.h1-grid) {
 		aspect-ratio: 1;
+		border: 2px solid var(--black);
+		border-radius:var(--base-size) ;
 	}
 
 	&>* {
