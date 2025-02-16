@@ -9,42 +9,33 @@ document.head.appendChild(markdownIt)
 
 let blocks = [ ]
 
+// let renderBlock = (block) => {
 
-let renderBlock = (block) => {
-	console.log(block);
+// 	let blockContainer = document.querySelector("#channel-blocks");
 
-	let blockContainer = document.querySelector("#channel-blocks");
+// 	let linkItem;
 
-	let linkItem;
+// 	if (block.image) {
+// 		linkItem = `
+// 		<picture>
+// 		  <source media="(max-width: 428px)" srcset="${block.image.thumb.url}"/>
+// 		  <source media="(max-width: 640px)" srcset="${block.image.large.url}"/>
+// 		  <img src="${block.image.original.url}"/>
+// 		</picture>`;
+// 	} else {
+// 		linkItem = `
+// 		<span>
+// 		  <h3>${block.title}</h3>
+// 		</span>`;
+// 	}
 
-	console.log(block.image)
-
-	if (block.image) {
-		linkItem = `
-		<picture>
-		  <source media="(max-width: 428px)" srcset="${block.image.thumb.url}"/>
-		  <source media="(max-width: 640px)" srcset="${block.image.large.url}"/>
-		  <img src="${block.image.original.url}"/>
-		</picture>`;
-	} else {
-		linkItem = `
-		<span>
-		  <h3>${block.title}</h3>
-		</span>`;
-	}
-
-	blockContainer.insertAdjacentHTML("beforeend", linkItem);
-};
-
-
-
-
+// 	blockContainer.insertAdjacentHTML("beforeend", linkItem);
+// };
 
 let placeChannelInfo = (data) => {
 
 	let title = document.querySelector('#channel-title')
 	title.innerHTML = data.title
-
 
 	let channelDescription = document.querySelector('#channel-description')
 	channelDescription.innerHTML = data.channelDescription
@@ -55,15 +46,12 @@ let placeChannelInfo = (data) => {
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
 	.then((response) => response.json()) // Return it as JSON data
 	.then((data) => { // Do stuff with the data
-		console.log(data) // Always good to check your response!
-		console.log(data.title)
-		console.log(data.created_art)
-		blocks = data.contents
-		data.contents.forEach(block => {
-			renderBlock(block)
-		});
-	})
 
+		blocks = data.contents
+		// data.contents.forEach(block => {
+		// 	renderBlock(block)
+		// });
+	})
 
 // printing
 // source https://jsfiddle.net/9FfKZ/4/
@@ -87,6 +75,30 @@ let printRandomBlock = () => {
 
 		//initiate printer
 		paper.innerHTML = `<img src="${randomBlock.image.original.url}" />`;
+		paper.onclick = () => {
+			insertBlockintoModal(randomBlock);
+		}
 		paperHolder.classList.add("print");
 	}, timeout);
 };
+
+// modal
+
+  const dialog = document.querySelector("#modal");
+  
+  const showModal = () => {
+	dialog.showModal();
+  }
+  
+  const closeModal = () => {
+	dialog.close();
+  }
+  
+  let insertBlockintoModal = (block) => {
+	showModal();
+	let modalContent = document.querySelector("#modal-content");
+	modalContent.innerHTML = `<div>
+	<img src="${block.image.original.url}" />
+	<h3 class="ok">${block.title}</h3>
+	</div>`;
+  }

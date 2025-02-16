@@ -8,6 +8,8 @@
 	<!-- css files -->
 	<link href="style.css" rel="stylesheet">
 	<link href="print.css" rel="stylesheet">
+	<link href="sizes.css" rel="stylesheet">
+	<link href="blockstyles.css" rel="stylesheet">
 	<script defer src="arena.js"></script>
 
 	<!-- Fonts -->
@@ -57,7 +59,7 @@
 			<picture class="mask-container block-img"><img class="img-contain" src="Assets/smile.png"></picture>
 			<a class="textlink-block">Guides</a>
 
-			<h1 class="h1-grid mask-container">
+			<h1 id="channel-title" class="h1-grid mask-container">
 				Risograph
 			</h1>
 
@@ -79,7 +81,7 @@
 
 	<article>
 		<div class="description">
-			<p>A hub for Risograph printing—<span>tutorials,</span> print <span>samples,</span> studio <span>links,</span> and a gateway to self-publishing and zine-making.</p>
+			<p id="channel-description">A hub for Risograph printing—<span>tutorials,</span> print <span>samples,</span> studio <span>links,</span> and a gateway to self-publishing and zine-making.</p>
 			<button class="button">
 				Start Exploring <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
 						<g clip-path="url(#clip0_82_41092)">
@@ -98,7 +100,6 @@
 			<h2>Find Random Resource</h2>
 			<section class="h2-blocks">
 				<button class="button" onclick="printRandomBlock()">Print</button>
-				
 				<div id="slot">
 				  <div id="paper-holder">
 					<div id="paper">
@@ -106,8 +107,14 @@
 				  </div>
 				</div>
 			  </section>
-		
 		</section>
+
+		<dialog id="modal">
+			<div id="modal-wrapper">
+			  <span id="modal-close" onclick="closeModal()">&times;</span>
+			  <div id="modal-content"></div>
+			</div>
+		  </dialog>
 
 		<section class="h2-titles">
 			<h2>Your Learning Journey</h2>
@@ -215,8 +222,8 @@
 			</section>
 		</section>
 
-		<figure id="channel-blocks" class="collection-all">
-		</figure>
+		<!-- <figure id="channel-blocks" class="collection-all">
+		</figure> -->
 
 	</article>
 
