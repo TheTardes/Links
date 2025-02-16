@@ -4,7 +4,7 @@
 
 	width: 150px;
 	height: 5px;
-	background-color: black;
+	background-color: var(--black);
 	margin: 10px;
 	border-radius: 5px;
 	position: relative;
@@ -39,4 +39,21 @@
 
 #paper-holder.print {
 	height: calc(var(--paper-height) + 1px);
+}
+
+
+/* blocks styles */
+
+.print-blocks {
+	margin-inline: var(--padding-blocks);
+	padding: calc(2* var(--padding-blocks));
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-blocks);
+	align-items: center;
+	border-radius: var(--radius);
+	border: solid 2px var(--black);
+
+	margin-bottom: 56px;
+
 }

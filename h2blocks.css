@@ -1,0 +1,155 @@
+h2 {
+	font-family: var(--decorative-font);
+	font-size: calc(1.5* var(--base-size));
+
+	padding: var(--padding-blocks);
+
+	background-color: var(--primary-color);
+	color: var(--white);
+
+	margin-inline: var(--padding-blocks);
+	border-radius: var(--radius);
+
+	text-align: center;
+
+}
+
+.h2-rotate-1 {
+	transform: rotate(3deg);
+}
+
+.h2-rotate-2 {
+	transform: rotate(-3deg);
+}
+
+
+.h2-blocks {
+	margin-inline: var(--padding-blocks);
+	padding-inline: var(--padding-22);
+
+	padding-block: var(--padding-blocks);
+
+	border-radius: var(--radius);
+
+	border: solid 2px var(--black);
+}
+
+.h2-titles {
+	display: flex;
+	flex-direction: column;
+
+
+	gap: var(--base-size);
+	margin-bottom: var(--padding-22);
+}
+
+/* list */
+
+.circles {
+	display: flex;
+	flex-direction: row;
+
+	& div {
+		height: 60px;
+		width: 60px;
+		border-radius: 100%;
+		margin-right: -22px;
+		opacity: 60%;
+	}
+
+	& :nth-child(1) {
+		background-color: var(--pink);
+	}
+
+	& :nth-child(2) {
+		background-color: var(--aqua);
+	}
+
+	& :nth-child(3) {
+		background-color: var(--violet);
+	}
+
+	& :nth-child(4) {
+		background-color: var(--green);
+	}
+
+	& :nth-child(5) {
+		background-color: var(--turqouise);
+	}
+
+	& :nth-child(6) {
+		background-color: var(--orange);
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-22);
+	padding-bottom: var(--padding-22);
+}
+
+.list-closed {
+	border-bottom: 2px solid var(--black);
+	padding-block: var(--padding-22);
+
+	& button {
+		display: flex;
+		flex-direction: column;
+		gap: var(--padding-blocks);
+	}
+
+	& svg {
+		width: 40px;
+		height: 40px;
+
+		& path {
+			stroke: var(--black);
+			fill: var(--black);
+		}
+	}
+}
+
+.left {
+	color: var(--black);
+	font-family: var(--decorative-font);
+	font-size: var(--button-size);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--base-size);
+
+	& div {
+		height: 30px;
+		width: 30px;
+		background-color: var(--primary-color);
+		border-radius: 100%;
+	}
+}
+
+
+.list-open {
+	padding-block: var(--padding-22);
+
+	& button {
+		display: flex;
+		flex-direction: column;
+		gap: var(--padding-22);
+		border-bottom: 2px solid var(--black);
+		padding-bottom: var(--base-size);
+	}
+
+	& picture {
+		margin-top: 32px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--padding-22);
+
+		&>div {
+			width: 100%;
+			height: 136px;
+			background-color: var(--turqouise);
+			border-radius: var(--base-size);
+		}
+	}
+}

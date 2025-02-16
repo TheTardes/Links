@@ -8,7 +8,8 @@
 	<!-- css files -->
 	<link href="style.css" rel="stylesheet">
 	<link href="print.css" rel="stylesheet">
-	<link href="sizes.css" rel="stylesheet">
+	<link href="modal.css" rel="stylesheet">
+	<link href="h2blocks.css" rel="stylesheet">
 	<link href="blockstyles.css" rel="stylesheet">
 	<script defer src="arena.js"></script>
 
@@ -36,7 +37,16 @@
 				</ul> -->
 			
 
-			<a class="button" href="https://www.are.na/rice-gallardo/risograph-5nwec8aul3u"> Arena</a>
+			<a class="button-link" href="https://www.are.na/rice-gallardo/risograph-5nwec8aul3u"> Arena <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
+				<g clip-path="url(#clip0_82_41092)">
+					<path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+				</g>
+				<defs>
+					<clipPath id="clip0_82_41092">
+						<rect width="50" height="100" fill="white" transform="matrix(0 1 -1 0 100 0)" />
+					</clipPath>
+				</defs>
+			</svg></a>
 		</nav>
 
 
@@ -80,7 +90,7 @@
 	</header>
 
 	<article>
-		<div class="description">
+		<div class="description mask-container">
 			<p id="channel-description">A hub for Risograph printing—<span>tutorials,</span> print <span>samples,</span> studio <span>links,</span> and a gateway to self-publishing and zine-making.</p>
 			<button class="button">
 				Start Exploring <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
@@ -97,8 +107,8 @@
 		</div>
 
 		<section class="h2-titles">
-			<h2>Find Random Resource</h2>
-			<section class="h2-blocks">
+			<h2 class="h2-rotate-1">Find Random Resource</h2>
+			<section class="print-blocks mask-container">
 				<button class="button" onclick="printRandomBlock()">Print</button>
 				<div id="slot">
 				  <div id="paper-holder">
@@ -111,14 +121,16 @@
 
 		<dialog id="modal">
 			<div id="modal-wrapper">
-			  <span id="modal-close" onclick="closeModal()">&times;</span>
+			  <span id="modal-close" onclick="closeModal()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+				<path d="M15.6629 14.0465C15.8775 14.2611 15.9981 14.5521 15.9981 14.8556C15.9981 15.1591 15.8775 15.4502 15.6629 15.6648C15.4483 15.8794 15.1572 16 14.8537 16C14.5502 16 14.2591 15.8794 14.0444 15.6648L8 9.61883L1.95365 15.6629C1.73903 15.8775 1.44794 15.9981 1.14442 15.9981C0.840901 15.9981 0.549813 15.8775 0.335193 15.6629C0.120573 15.4483 4.52279e-09 15.1572 0 14.8537C-4.52279e-09 14.5502 0.120573 14.2592 0.335193 14.0446L6.38155 8.00048L0.337097 1.95448C0.122476 1.73987 0.0019041 1.4488 0.00190411 1.1453C0.00190411 0.841803 0.122476 0.550732 0.337097 0.336125C0.551717 0.121517 0.842805 0.000951818 1.14632 0.000951815C1.44984 0.000951812 1.74093 0.121517 1.95555 0.336125L8 6.38212L14.0464 0.335173C14.261 0.120565 14.5521 -5.05633e-09 14.8556 0C15.1591 5.05633e-09 15.4502 0.120565 15.6648 0.335173C15.8794 0.54978 16 0.84085 16 1.14435C16 1.44785 15.8794 1.73892 15.6648 1.95353L9.61845 8.00048L15.6629 14.0465Z" fill="black"/>
+				</svg></span>
 			  <div id="modal-content"></div>
 			</div>
 		  </dialog>
 
 		<section class="h2-titles">
-			<h2>Your Learning Journey</h2>
-			<section class="h2-blocks">
+			<h2 class="h2-rotate-2">Your Learning Journey</h2>
+			<section class="h2-blocks mask-container">
 				<ul class="list">
 					<li class="list-open">
 						<button>
