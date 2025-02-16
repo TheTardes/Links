@@ -196,9 +196,9 @@ nav {
 	padding-inline: 24px;
 	height: var(--height);
 	font-size: var(--base-size);
-	background-color: var(--primary-color);
 
 	a {
+
 		color: var(--white);
 	}
 }
@@ -228,19 +228,22 @@ nav {
 }
 
 .button {
+
+	color: var(--white);
 	text-transform: uppercase;
 	font-size: var(--button-size);
 
 	display: flex;
 	align-items: center;
 	padding-inline: var(--button-size);
-	height: 56px;
+	height: 44px;
 
-	background-color: var(--white);
+	background-color: var(--primary-color);
 	border-radius: 999px;
 	cursor: pointer;
 
 	& > svg {
+		color: var(--white);
 		width: 44px;
 		height: 44px;
 	}
