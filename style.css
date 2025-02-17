@@ -21,8 +21,8 @@
 
 	--decorative-font: Bungee;
 	text-transform: uppercase;
-	font-family: Cabin;
-	font-weight: 300;
+	font-family: Montserrat;
+	font-weight: 500;
 
 	--height: 3.75rem;
 
@@ -78,6 +78,7 @@ nav {
 		font-size: 24px;
 		line-height: 38px;
 		text-transform: none;
+		font-weight: 400;
 		text-wrap: pretty;
 
 	}
@@ -143,47 +144,6 @@ nav {
 }
 
 
-
-/* 
-.collection-all {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	background-color: var(--black);
-	gap: 4px;
-
-	&>* {
-		background: var(--background-color);
-		aspect-ratio: 1;
-	}
-
-	& img {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-
-	& li * {
-		max-width: 100%;
-	}
-
-	& h3 {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding-inline: 6px;
-		overflow: hidden;
-	}
-} */
-
-
-
-
-
-
-
-
-
 footer {
 	background-color: var(--primary-color);
 	display: flex;
@@ -231,13 +191,77 @@ footer {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 700px) {
 	:root {
 		--base-size: 24px;
-		--button-size: 44px;
+		--button-size: 36px;
+		font-size: var(--base-size);
+	}
+
+	h1 {
+		font-size: 100px;
+		line-height: 130px;
+	}
+
+
+	.description {
+		p {
+			margin-bottom: calc(2* var(--button-size));
+			font-size: 40px;
+			line-height: 60px;
+		}
+		
+	}
+
+	.description {
+		padding: calc(2* var(--base-size));
+		margin-block: calc(8*var(--base-size));
+	
+	}
+
+}
+
+@media (min-width:1024px){
+	.description {
+		border: 4px solid var(--black);
+		padding: 80px;
+		p {
+			margin-bottom: calc(2* var(--button-size));
+			font-size: 40px;
+			line-height: 60px;
+		}
+		
+	}
+
+	.button {
+
+		height: 70px;
+	
+		&>svg {
+	
+			width: 60px;
+			height: 60px;
+
+		}
+	}
+
+	
+	
+}
+
+
+@media (min-width:1400px) {
+	:root {
+		--base-size: 24px;
+		--button-size: 32px;
 		font-size: var(--base-size);
 		--height: 114px;
 
+	}
+
+	body{
+		max-width: 1600px;
+		margin: auto;
 	}
 
 	h1 {
@@ -245,13 +269,14 @@ footer {
 		line-height: 180px;
 	}
 
-
-
 	.description {
-		font-size: 80px;
-		line-height: 110px;
-		padding: 200px;
+		border: 6px solid var(--black);
+		padding:120px;
+		p {
+			font-size: 60px;
+			line-height: 80px;
+		}
+		
 	}
-
 
 }

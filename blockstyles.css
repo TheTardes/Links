@@ -70,6 +70,7 @@
 	align-items: center;
 	padding-inline: var(--padding-blocks);
 	overflow: hidden;
+	font-size: var(--base-size);
 	/* I will look at it later */
 }
 
@@ -145,28 +146,35 @@
 	.grid-pattern {
 
 		margin-inline: none;
-		
 
-	.info-block {
-		font-size: 26px;
-	}
+}
 
+.info-block {
+	font-size: 26px;
 }
 
 }
 
 
-
-@media (min-width: 992px) {
+@media(min-width:700px){
 	:root {
 		--base-size: 24px;
-		--button-size: 44px;
+		--button-size: 36px;
 		font-size: var(--base-size);
-		--height: 114px;
-
 	}
+	.info-block {
+		font-size: 32px;
+	}
+}
 
+@media (min-width:1024px){
 
+	:root {
+		--base-size: 24px;
+		--button-size: 32px;
+		font-size: var(--base-size);
+	}
+	
 	.grid-pattern {
 		grid-template-columns: repeat(6, 1fr);
 
@@ -175,10 +183,47 @@
 			aspect-ratio: 6;
 
 		}
+
+	}
+	
+	.info-block {
+		font-size: var(--base-size);
+	}
+
+	.textlink-block {
+		font-size: 30px;
+	
+	}
+
+}
+
+
+
+
+@media (min-width:1400px) {
+	:root {
+		--base-size: 24px;
+		--button-size: 32px;
+		font-size: var(--base-size);
+		--height: 114px;
+
+	}
+
+	.grid-pattern {
+
+		&>:not(.h1-grid) {
+			border: 3px solid var(--black);
+		}
 	}
 
 	.info-block {
-		font-size: 40px;
+		font-size: 34px;
 	}
+
+	.textlink-block {
+		font-size: 44px;
+	
+	}
+
 
 }
