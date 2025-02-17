@@ -1,6 +1,6 @@
 body:has(#modal[open]) {
 	overflow: hidden;
-  }
+}
 
 #modal {
 	position: fixed;
@@ -8,15 +8,15 @@ body:has(#modal[open]) {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-  }
-  
-  #modal[open] {
+}
+
+#modal[open] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
-  
-  #modal-wrapper {
+}
+
+#modal-wrapper {
 	background-color: var(--background-color);
 
 	border-radius: var(--radius);
@@ -27,10 +27,12 @@ body:has(#modal[open]) {
 	width: 335px;
 	height: fit-content;
 	position: relative;
-  }
-  
-  #modal-close {
-	
+
+
+}
+
+#modal-close {
+
 	position: absolute;
 	right: -8;
 	top: -22;
@@ -42,12 +44,97 @@ body:has(#modal[open]) {
 		border-radius: 100%;
 		border: 2px solid var(--black);
 		background-color: var(--background-color);
-	color: var(--black);
+		color: var(--black);
 	}
-  }
-  
-  #modal::backdrop {
-	background-color: rgba(187, 192, 210, 0.6);
-  }
+}
 
-  
+#modal::backdrop {
+	background-color: rgba(187, 192, 210, 0.6);
+}
+
+#modal-text {
+	text-transform: none;
+	line-height: 1.5rem;
+	text-wrap: pretty;
+}
+
+h3 {
+	font-size: calc(1.4* var(--button-size));
+	font-family: var(--decorative-font);
+}
+
+.modal-image{
+	display: flex;
+	flex-direction: column;
+	gap: var(--button-size);
+
+	&>img {
+		border-radius: var(--radius);
+		border: 2px solid var(--black);
+		overflow: hidden;
+		object-fit: cover;
+
+	}
+}
+
+
+.modal-video{
+	display: flex;
+	flex-direction: column;
+	gap: var(--button-size);
+
+	&>iframe {
+		border-radius: var(--radius);
+		border: 2px solid var(--black);
+		overflow: hidden;
+
+	width: 100%;
+	aspect-ratio: 1.7;
+
+	}
+}
+
+
+@media(min-width:530px) {
+	#modal-wrapper {
+		width: 500px;
+	}
+}
+
+@media(min-width:700px) {
+
+	#modal-wrapper {
+
+		border: solid 3px var(--black);
+		width: 90%;
+		padding: 60px;
+
+	}
+
+	#modal-close {
+
+		right: -22;
+		top: -32;
+
+
+		& svg {
+			padding: 22px;
+			height: 70px;
+			width: 70px;
+
+			border: 3px solid var(--black);
+
+		}
+	}
+}
+
+@media(min-width:1024px) {
+
+	#modal-wrapper {
+
+		border: solid 3px var(--black);
+		width: 700px;
+		padding: 60px;
+
+	}
+}

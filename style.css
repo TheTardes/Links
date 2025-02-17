@@ -95,9 +95,11 @@ nav {
 	padding-inline: var(--button-size);
 	height: 44px;
 
-	background-color: var(--primary-color);
+	background-color: var(--black);
 	border-radius: calc(0.5 * var(--radius));
 	cursor: pointer;
+
+	width: fit-content;
 
 	&>svg {
 

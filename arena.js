@@ -7,7 +7,7 @@ let markdownIt = document.createElement('script')
 markdownIt.src = 'https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js'
 document.head.appendChild(markdownIt)
 
-let blocks = [ ]
+let blocks = []
 
 // let renderBlock = (block) => {
 
@@ -51,6 +51,8 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		// data.contents.forEach(block => {
 		// 	renderBlock(block)
 		// });
+
+		console.log (blocks)
 	})
 
 // printing
@@ -73,6 +75,7 @@ let printRandomBlock = () => {
 		let blocksWithImage = blocks.filter((block) => block.image);
 		let randomBlock = blocksWithImage[Math.floor(Math.random() * blocksWithImage.length)];
 
+
 		//initiate printer
 		paper.innerHTML = `<img src="${randomBlock.image.original.url}" />`;
 		paper.onclick = () => {
@@ -84,21 +87,47 @@ let printRandomBlock = () => {
 
 // modal
 
-  const dialog = document.querySelector("#modal");
-  
-  const showModal = () => {
+const dialog = document.querySelector("#modal");
+
+const showModal = () => {
 	dialog.showModal();
-  }
-  
-  const closeModal = () => {
+}
+
+const closeModal = () => {
 	dialog.close();
-  }
-  
-  let insertBlockintoModal = (block) => {
+}
+
+let insertBlockintoModal = (block) => {
 	showModal();
 	let modalContent = document.querySelector("#modal-content");
-	modalContent.innerHTML = `<div>
-	<img src="${block.image.original.url}" />
-	<h3 class="ok">${block.title}</h3>
+	if (block.class === "Media") {
+		modalContent.innerHTML = `<div class="modal-video"><h3>${block.title}</h3> ${block.embed.html}	<p id="modal-text"> ${block.description ||""} </p> <a class= "button"> view original <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
+						<g clip-path="url(#clip0_82_41092)">
+							<path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+						</g>
+						<defs>
+							<clipPath id="clip0_82_41092">
+								<rect width="50" height="100" fill="white" transform="matrix(0 1 -1 0 100 0)" />
+							</clipPath>
+						</defs>
+					</svg> </a>
 	</div>`;
-  }
+	}
+
+
+	else {
+		modalContent.innerHTML = `<div class="modal-image"><h3>${block.title}</h3>
+	<img src="${block.image.original.url}" />
+	<p id="modal-text"> ${block.description ||""} </p> <a class= "button"> view original <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
+						<g clip-path="url(#clip0_82_41092)">
+							<path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+						</g>
+						<defs>
+							<clipPath id="clip0_82_41092">
+								<rect width="50" height="100" fill="white" transform="matrix(0 1 -1 0 100 0)" />
+							</clipPath>
+						</defs>
+					</svg> </a>
+	</div>`;
+	}
+}
