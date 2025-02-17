@@ -1,5 +1,8 @@
-#slot {
+:root{
 	--paper-height: 100px;
+}
+
+#slot {
 	--print-time: 1s;
 
 	width: 150px;
@@ -54,6 +57,30 @@
 	border-radius: var(--radius);
 	border: solid 2px var(--black);
 
-	margin-bottom: 56px;
+	margin-bottom: var(--paper-height);
+
+}
+
+@media (min-width:530px) {
+
+:root{
+	--paper-height: 300px;
+}	
+	#slot {
+	
+	
+		width: 400px;
+		height: 5px;
+		background-color: var(--black);
+		margin: 10px;
+		border-radius: 5px;
+		position: relative;
+	}
+
+	#paper {
+
+		width: 308px;
+	
+	}
 
 }

@@ -153,3 +153,49 @@ h2 {
 		}
 	}
 }
+
+@media (min-width:530px) {
+	h2 {
+		width: 500px;
+		align-self: center;
+	}
+
+	.h2-titles {
+		margin-bottom: 100px;
+	}
+}
+
+@media (min-width:650px) {
+	.list-closed {
+		& button {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	.list-open {
+		& button {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	.circles {
+		display: flex;
+		flex-direction: row;
+
+		& div {
+			border-radius: 100%;
+			margin-right: 0px;
+			margin-left: -22px;
+		}
+	}
+
+	.h2-blocks {
+		padding-inline: calc(2* var(--padding-22));
+	}
+}
