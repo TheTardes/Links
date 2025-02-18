@@ -14,7 +14,14 @@ body:has(#modal[open]) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
+ #modal-content{
+	max-height:  80vh;
+	overflow-y: auto;
+	padding-inline: var(--padding-22);
+	padding-block: calc(1.5* var(--padding-22));
+ }
 
 #modal-wrapper {
 	background-color: var(--background-color);
@@ -22,10 +29,8 @@ body:has(#modal[open]) {
 	border-radius: var(--radius);
 	border: solid 2px var(--black);
 
-	padding-inline: var(--padding-22);
-	padding-block: calc(2* var(--padding-22));
 	width: 335px;
-	
+
 	position: relative;
 
 
@@ -73,7 +78,6 @@ h3 {
 		border: 2px solid var(--black);
 		overflow: hidden;
 		object-fit: cover;
-
 	}
 }
 
@@ -102,12 +106,14 @@ h3 {
 }
 
 @media(min-width:700px) {
+	#modal-content{
+		padding: 60px;
+	 }
 
 	#modal-wrapper {
 
 		border: solid 3px var(--black);
 		width: 90%;
-		padding: 60px;
 
 	}
 
@@ -134,7 +140,5 @@ h3 {
 
 		border: solid 3px var(--black);
 		width: 700px;
-		padding: 60px;
-
 	}
 }
