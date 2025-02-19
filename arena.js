@@ -47,7 +47,8 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 	.then((response) => response.json()) // Return it as JSON data
 	.then((data) => { // Do stuff with the data
 
-		blocks = data.contents
+		blocks = data.contents;
+		insertBlocks();
 		// data.contents.forEach(block => {
 		// 	renderBlock(block)
 		// });
@@ -183,3 +184,60 @@ let insertBlockintoModal = (block) => {
 	</div> `;
 	}
 }
+
+// list
+let insertBlocks = () => {
+	let list1 = document.querySelector(".list-1");
+	list1.children[1].innerHTML = `<picture><img src="${blocks[0].image.original.url}" /></picture>
+									<p class="text-block"> 
+									Read on: ${blocks[3].title}</p>
+									<picture><img src="${blocks[5].image.original.url}" /></picture>
+									<picture><img src="${blocks[41].image.original.url}" /></picture>`;
+	let list2 = document.querySelector(".list-2");
+	list2.children[1].innerHTML = `<picture><img src="${blocks[1].image.original.url}" /></picture>
+									<picture><img src="${blocks[2].image.original.url}" /></picture>
+									<picture><img src="${blocks[8].image.original.url}" /></picture>
+									<picture><img src="${blocks[11].image.original.url}" /></picture>
+									<picture><img src="${blocks[23].image.original.url}" /></picture>
+									<picture><img src="${blocks[24].image.original.url}" /></picture>
+									<picture><img src="${blocks[25].image.original.url}" /></picture>
+									<picture><img src="${blocks[30].image.original.url}" /></picture>
+									<picture><img src="${blocks[34].image.original.url}" /></picture>
+									<picture><img src="${blocks[36].image.original.url}" /></picture>
+									<picture><img src="${blocks[37].image.original.url}" /></picture>`;
+	let list3 = document.querySelector(".list-3");
+	list3.children[1].innerHTML = `<picture><img src="${blocks[13].image.original.url}" /></picture>
+									<p class="text-block"> 
+									Read on: ${blocks[14].title}</p>
+									<picture><img src="${blocks[15].image.original.url}" /></picture>
+									<picture><img src="${blocks[17].image.original.url}" /></picture>
+									<p class="text-block"> 
+									Read on: ${blocks[19].title}</p>
+									<picture><img src="${blocks[21].image.original.url}" /></picture>
+									<picture><img src="${blocks[28].image.original.url}" /></picture>`;
+	let list4 = document.querySelector(".list-4");
+	list4.children[1].innerHTML = `<picture><img src="${blocks[4].image.original.url}" /></picture>
+									<picture><img src="${blocks[9].image.original.url}" /></picture>
+									<picture><img src="${blocks[12].image.original.url}" /></picture>
+									<picture><img src="${blocks[16].image.original.url}" /></picture>
+									<picture><img src="${blocks[18].image.original.url}" /></picture>
+									<picture><img src="${blocks[22].image.original.url}" /></picture>
+									<picture><img src="${blocks[27].image.original.url}" /></picture>
+									<picture><img src="${blocks[33].image.original.url}" /></picture>
+									<picture><img src="${blocks[38].image.original.url}" /></picture>
+									`;
+};
+
+
+//   this is something I took form internet - will add source later closed the tabs
+let openItems = () => {
+	let ul = document.querySelector(".list");
+
+	Array.from(ul.children).forEach((li) => {
+		li.children[0].addEventListener("click", () => {
+			li.classList.toggle("open");
+		});
+	});
+};
+
+openItems();
