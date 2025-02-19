@@ -1,11 +1,11 @@
 :root{
-	--paper-height: 100px;
+	--paper-height: 200px;
 }
 
 #slot {
 	--print-time: 1s;
 
-	width: 150px;
+	width: 250px;
 	height: 5px;
 	background-color: var(--black);
 	margin: 10px;
