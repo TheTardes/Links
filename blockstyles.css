@@ -1,4 +1,3 @@
-
 /* Grids */
 
 
@@ -78,12 +77,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--secondary-color);
+	
 	font-size: var(--button-size);
 	font-family: var(--decorative-font);
 	text-align: center;
 
 }
+
+
+
 
 
 
@@ -147,34 +149,35 @@
 
 		margin-inline: none;
 
+	}
+
+	.info-block {
+		font-size: 26px;
+	}
+
 }
 
-.info-block {
-	font-size: 26px;
-}
 
-}
-
-
-@media(min-width:700px){
+@media(min-width:700px) {
 	:root {
 		--base-size: 24px;
 		--button-size: 36px;
 		font-size: var(--base-size);
 	}
+
 	.info-block {
 		font-size: 32px;
 	}
 }
 
-@media (min-width:1024px){
+@media (min-width:1024px) {
 
 	:root {
 		--base-size: 24px;
 		--button-size: 32px;
 		font-size: var(--base-size);
 	}
-	
+
 	.grid-pattern {
 		grid-template-columns: repeat(6, 1fr);
 
@@ -185,14 +188,14 @@
 		}
 
 	}
-	
+
 	.info-block {
 		font-size: var(--base-size);
 	}
 
 	.textlink-block {
 		font-size: 30px;
-	
+
 	}
 
 }
@@ -222,7 +225,7 @@
 
 	.textlink-block {
 		font-size: 44px;
-	
+
 	}
 
 
