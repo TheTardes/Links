@@ -59,10 +59,10 @@ h2 {
 	flex-direction: row;
 
 	& div {
-		height: 60px;
-		width: 60px;
+		height: 44px;
+		width: 44px;
 		border-radius: 100%;
-		margin-right: -22px;
+		margin-right: -20px;
 		opacity: 60%;
 	}
 
@@ -208,9 +208,10 @@ h2 {
 		overflow: hidden;
 		transition: height 0.5s ease-in-out;
 
-		& img, .text-block {
+		& img,
+		.text-block {
 			aspect-ratio: 2;
-			border-radius: var(--base-size);
+			border-radius: calc(0.7* var(--radius));
 			border: 1px solid var(--black);
 			object-fit: cover;
 			overflow: hidden;
@@ -233,7 +234,7 @@ h2 {
 	}
 }
 
-@media (min-width:530px) {
+@media (min-width:500px) {
 	h2 {
 		width: 500px;
 		align-self: center;
@@ -241,25 +242,6 @@ h2 {
 
 	.h2-titles .h2-print {
 		margin-bottom: 100px;
-	}
-}
-
-
-
-@media (min-width:768px) {
-
-	h2 {
-		font-size: 40px;
-		width: 700px;
-	}
-
-	.list-closed {
-		& button {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-		}
 	}
 
 	.list-open {
@@ -272,19 +254,42 @@ h2 {
 	}
 
 	.circles {
-		display: flex;
-		flex-direction: row;
+
+		& div {
+			margin-right: 0px;
+			margin-left: -20px;
+
+		}
+	}
+
+}
+
+
+
+@media (min-width:768px) {
+
+	h2 {
+		font-size: 40px;
+		width: 700px;
+	}
+
+
+	.circles {
 
 		& div {
 			border-radius: 100%;
 			margin-right: 0px;
 			margin-left: -22px;
+			height: 60px;
+			width: 60px;
+
 		}
 	}
 
 	.h2-blocks {
 		padding-inline: calc(2* var(--padding-22));
 	}
+
 }
 
 @media (min-width:1024px) {
@@ -315,6 +320,10 @@ h2 {
 		border: 4px solid var(--black);
 	}
 
+	.left {
+		font-size: 36px;
+	}
+
 }
 
 
@@ -325,6 +334,6 @@ h2 {
 	}
 
 	.left {
-		font-size: 60px;
+		font-size: 40px;
 	}
 }
