@@ -1,4 +1,4 @@
-:root{
+:root {
 	--paper-height: 200px;
 }
 
@@ -33,6 +33,9 @@
 	border: 1px solid #ccc;
 	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 	border-top: 0;
+	background-color: var(--background-color);
+
+	cursor: pointer;
 }
 
 #paper img {
@@ -62,11 +65,30 @@
 
 }
 
+
+.text-block {
+
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background-color);
+	justify-content: center;
+	gap: 12px;
+
+	text-align: center;
+	padding-inline: 12px;
+
+	&>h3 {
+		font-size: var(--base-size);
+	}
+}
+
 @media (min-width:530px) {
 
-:root{
-	--paper-height: 300px;
-}	
+	:root {
+		--paper-height: 300px;
+	}
+
 	#slot {
 		width: 400px;
 		height: 5px;
@@ -76,14 +98,22 @@
 		position: relative;
 	}
 
+	.text-block {
+		padding-inline: var(--padding-22);
+
+		&>h3 {
+			font-size: var(--base-size);
+		}
+	}
 }
+
 
 @media (min-width:1024px) {
 	.print-blocks {
-		width:600px;
+		width: 600px;
 		border: 4px solid var(--black);
 		margin-left: 0px;
 		margin-right: calc(6*var(--padding-blocks));
-	
+
 	}
 }
