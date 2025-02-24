@@ -144,6 +144,7 @@ h2 {
 	padding-top: var(--padding-22);
 }
 
+
 .list-open {
 
 	& button {
@@ -155,6 +156,19 @@ h2 {
 		width: 100%;
 
 		cursor: pointer;
+
+		&:hover {
+			& p {
+				color: var(--primary-color);
+	
+				& svg {
+					& path {
+						stroke: var(--primary-color);
+						fill: var(--primary-color);
+					}
+				}
+			}
+		}
 	}
 
 	& svg {
@@ -178,7 +192,7 @@ h2 {
 
 
 	&>section {
-		
+
 		margin-block: 32px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -229,10 +243,14 @@ h2 {
 	padding-inline: 12px;
 
 	font-size: calc(0.6* var(--base-size));
-	
+
 }
 
 @media (min-width:500px) {
+	.h2-blocks {
+		margin-inline: 0px;
+	}
+
 	h2 {
 		width: 500px;
 		align-self: center;
@@ -267,12 +285,12 @@ h2 {
 		background-color: var(--background-color);
 		justify-content: center;
 		gap: 12px;
-	
+
 		text-align: center;
 		padding-inline: 12px;
-	
+
 		font-size: var(--base-size);
-		
+
 	}
 
 }
