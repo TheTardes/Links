@@ -11,7 +11,6 @@ h2 {
 	border-radius: var(--radius);
 
 	text-align: center;
-
 }
 
 .h2-rotate-1 {
@@ -21,7 +20,6 @@ h2 {
 .h2-rotate-2 {
 	transform: rotate(-3deg);
 }
-
 
 .h2-blocks {
 	margin-inline: var(--padding-blocks);
@@ -47,9 +45,17 @@ h2 {
 	display: flex;
 	flex-direction: column;
 
-
 	gap: var(--base-size);
+	margin-top: calc(6*var(--padding-22));
+}
+
+.h2-creations {
+	display: flex;
+	flex-direction: column;
+
+	gap: calc(2* var(--base-size));
 	margin-bottom: var(--padding-22);
+	margin-top: calc(4*var(--padding-22));
 }
 
 /* list */
@@ -68,26 +74,50 @@ h2 {
 
 	& :nth-child(1) {
 		background-color: var(--pink);
+
+		&:hover {
+			opacity: 100%;
+		}
 	}
 
 	& :nth-child(2) {
 		background-color: var(--aqua);
+
+		&:hover {
+			opacity: 100%;
+		}
 	}
 
 	& :nth-child(3) {
 		background-color: var(--violet);
+
+		&:hover {
+			opacity: 100%;
+		}
 	}
 
 	& :nth-child(4) {
 		background-color: var(--green);
+
+		&:hover {
+			opacity: 100%;
+		}
 	}
 
 	& :nth-child(5) {
 		background-color: var(--turqouise);
+
+		&:hover {
+			opacity: 100%;
+		}
 	}
 
 	& :nth-child(6) {
 		background-color: var(--orange);
+
+		&:hover {
+			opacity: 100%;
+		}
 	}
 }
 
@@ -116,34 +146,32 @@ h2 {
 /* manually adding all list heights */
 .list-1 {
 	&.open section {
-		height: fit-content;
+		height: 148px;
 	}
 }
 
 .list-2 {
 	&.open section {
-		height: fit-content;
+		height: 480px;
 	}
 }
 
 .list-3 {
 	&.open section {
-		height: fit-content;
+		height: 308px;
 	}
 }
 
 .list-4 {
 	&.open section {
-		height: fit-content;
+		height: 388px;
 	}
 }
 
 /* list open-closed states */
-
 #padding-top {
 	padding-top: var(--padding-22);
 }
-
 
 .list-open {
 
@@ -160,7 +188,7 @@ h2 {
 		&:hover {
 			& p {
 				color: var(--primary-color);
-	
+
 				& svg {
 					& path {
 						stroke: var(--primary-color);
@@ -181,7 +209,6 @@ h2 {
 		}
 	}
 
-
 	&.open .plus {
 		display: none;
 	}
@@ -192,7 +219,6 @@ h2 {
 
 
 	&>section {
-
 		margin-block: 32px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -215,7 +241,7 @@ h2 {
 			cursor: pointer;
 			filter: grayscale(100%);
 
-			-webkit-transition: all 1s ease;
+			transition: all 1s ease;
 
 			/* source: https://thebrandsmen.com/css-image-hover-effects/ */
 
@@ -243,13 +269,9 @@ h2 {
 	padding-inline: 12px;
 
 	font-size: calc(0.6* var(--base-size));
-
 }
 
 @media (min-width:500px) {
-	.h2-blocks {
-		margin-inline: 0px;
-	}
 
 	h2 {
 		width: 500px;
@@ -258,6 +280,10 @@ h2 {
 
 	.h2-titles .h2-print {
 		margin-bottom: 100px;
+	}
+
+	.h2-print {
+		margin-top: 200px;
 	}
 
 	.list-open {
@@ -274,12 +300,10 @@ h2 {
 		& div {
 			margin-right: 0px;
 			margin-left: -20px;
-
 		}
 	}
 
 	.text-media {
-
 		display: flex;
 		flex-direction: column;
 		background-color: var(--background-color);
@@ -290,11 +314,8 @@ h2 {
 		padding-inline: 12px;
 
 		font-size: var(--base-size);
-
 	}
-
 }
-
 
 
 @media (min-width:768px) {
@@ -313,14 +334,12 @@ h2 {
 			margin-left: -22px;
 			height: 60px;
 			width: 60px;
-
 		}
 	}
 
 	.h2-blocks {
 		padding-inline: calc(2* var(--padding-22));
 	}
-
 }
 
 @media (min-width:1024px) {
@@ -330,7 +349,6 @@ h2 {
 		width: fit-content;
 		border-radius: 24px;
 		margin: 0px;
-
 	}
 
 	.left {
@@ -338,9 +356,7 @@ h2 {
 	}
 
 	.h2-print {
-		align-items: flex-end;
-		gap: 44px;
-
+		margin-top: 300px;
 	}
 
 	.h2-titles {
@@ -355,8 +371,10 @@ h2 {
 		font-size: 36px;
 	}
 
+	.h2-creations {
+		margin-block: 300px;
+	}
 }
-
 
 @media (min-width:1400px) {
 
@@ -366,5 +384,11 @@ h2 {
 
 	.left {
 		font-size: 40px;
+	}
+}
+
+@media(min-width:1600px) {
+	.h2-blocks {
+		margin-inline: 0px;
 	}
 }

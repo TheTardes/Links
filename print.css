@@ -1,3 +1,5 @@
+/* source:https://jsfiddle.net/9FfKZ/4/
+I adapted the main function ro my styles */
 :root {
 	--paper-height: 200px;
 }
@@ -62,9 +64,7 @@
 	border: solid 2px var(--black);
 
 	margin-bottom: var(--paper-height);
-
 }
-
 
 .text-block {
 
@@ -107,13 +107,11 @@
 	}
 }
 
-
-@media (min-width:1024px) {
+@media (min-width:1400px) {
 	.print-blocks {
-		width: 600px;
+		width: 1170px;
 		border: 4px solid var(--black);
-		margin-left: 0px;
-		margin-right: calc(6*var(--padding-blocks));
+		margin-inline: auto;
 
 	}
 }

@@ -36,7 +36,7 @@
 
 	display: flex;
 	align-items: center;
-	gap:calc(1.5*var(--base-size));
+	gap: calc(1.5*var(--base-size));
 
 }
 
@@ -108,7 +108,7 @@ nav {
 
 	width: fit-content;
 
-	&:hover{
+	&:hover {
 		background-color: var(--primary-color);
 	}
 
@@ -125,7 +125,6 @@ nav {
 
 }
 
-/* hover effect source: https://css-tricks.com/css-link-hover-effects/ */
 
 .button-link {
 	display: flex;
@@ -153,11 +152,13 @@ nav {
 
 
 footer {
-	background-color: var(--primary-color);
 	display: flex;
 	justify-content: space-between;
-	color: var(--white);
 	padding: var(--padding-blocks);
+
+	& p{
+		text-transform: none;
+	}
 }
 
 /* .background {
@@ -199,18 +200,6 @@ footer {
 		}
 	}
 
-
-	nav {
-		padding-inline: 0px;
-	}
-
-	footer {
-		padding: 0px;
-	}
-
-	.description {
-		margin-inline: 0px;
-	}
 }
 
 
@@ -301,4 +290,18 @@ footer {
 
 	}
 
+}
+
+@media(min-width:1600px) {
+	.description {
+		margin-inline: 0px;
+	}
+
+	nav {
+		padding-inline: 0px;
+	}
+
+	footer {
+		padding: 0px;
+	}
 }

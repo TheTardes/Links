@@ -7,6 +7,20 @@ let markdownIt = document.createElement('script')
 markdownIt.src = 'https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js'
 document.head.appendChild(markdownIt)
 
+let placeChannelInfo = (data) => {
+	// Target some elements in your HTML:
+	let channelTitle = document.querySelector('#channel-title')
+	let channelDescription = document.querySelector('#channel-description')
+	let channelCount = document.querySelector('#channel-count')
+	let channelLink = document.querySelector('#channel-link')
+
+	// Then set their content/attributes to our data:
+	channelTitle.innerHTML = data.title
+	channelDescription.innerHTML = window.markdownit().render(data.metadata.description) // Converts Markdown → HTML
+	channelCount.innerHTML = data.length
+	channelLink.href = `https://www.are.na/channel/${channelSlug}`
+}
+
 let blocks = []
 
 let renderBlock = (block) => {
@@ -22,25 +36,12 @@ let renderBlock = (block) => {
 		  <source media="(max-width: 640px)" srcset="${block.image.large.url}"/>
 		  <img src="${block.image.original.url}"/>
 		</picture>`;
-	} else {
-		linkItem = `
-		<span>
-		  <h3>${block.title}</h3>
-		</span>`;
-	}
+	} 
 
 	blockContainer.insertAdjacentHTML("beforeend", linkItem);
 };
 
-let placeChannelInfo = (data) => {
 
-	let title = document.querySelector('#channel-title')
-	title.innerHTML = data.title
-
-	let channelDescription = document.querySelector('#channel-description')
-	channelDescription.innerHTML = data.channelDescription
-
-}
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
@@ -53,6 +54,8 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			renderBlock(block)
 		});
 	})
+
+	
 
 // printing
 // source https://jsfiddle.net/9FfKZ/4/
@@ -103,8 +106,6 @@ let insertBlockintoModal = (block) => {
 	showModal();
 	let modalContent = document.querySelector("#modal-content");
 	if (block.class === "Media") {
-		console.log(block.description)
-		console.log(block)
 		modalContent.innerHTML = `<div class="modal-video">
 		<h3>${block.title}</h3> ${block.embed.html}
 		<p  class="margin" id="modal-text"> ${block.description || ""} </p> 
@@ -247,3 +248,13 @@ let openItems = () => {
 };
 
 openItems();
+
+
+// audio play - for button source: https://stackoverflow.com/questions/9419263/how-to-play-audio
+// this souces gives 
+
+
+function play() {
+	var audio = new Audio('https:///Users/inji/Desktop/printer-sound.MP3');
+	audio.play();
+  }
