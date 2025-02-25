@@ -82,7 +82,7 @@
 .collection-all {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	aspect-ratio: 1;
+	aspect-ratio: 1 1;
 	padding-inline: var(--padding-blocks);
 
 	&>* {

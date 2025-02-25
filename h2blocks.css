@@ -143,30 +143,17 @@ h2 {
 	}
 }
 
-/* manually adding all list heights */
-.list-1 {
-	&.open section {
-		height: 148px;
-	}
-}
-
-.list-2 {
-	&.open section {
-		height: 480px;
-	}
-}
-
-.list-3 {
-	&.open section {
-		height: 308px;
-	}
-}
-
+/* adding all list heights */
+.list-1,
+.list-2,
+.list-3,
 .list-4 {
 	&.open section {
-		height: 388px;
+		height: fit-content;
+		padding-bottom: var(--base-size);
 	}
 }
+
 
 /* list open-closed states */
 #padding-top {
@@ -185,6 +172,17 @@ h2 {
 
 		cursor: pointer;
 
+		& svg {
+			width: 40px;
+			height: 40px;
+
+			& path {
+				stroke: var(--black);
+				fill: var(--black);
+			}
+		}
+
+
 		&:hover {
 			& p {
 				color: var(--primary-color);
@@ -196,16 +194,13 @@ h2 {
 					}
 				}
 			}
-		}
-	}
 
-	& svg {
-		width: 40px;
-		height: 40px;
-
-		& path {
-			stroke: var(--black);
-			fill: var(--black);
+			& svg {
+				& path {
+					stroke: var(--primary-color);
+					fill: var(--primary-color);
+				}
+			}
 		}
 	}
 
@@ -219,7 +214,8 @@ h2 {
 
 
 	&>section {
-		margin-block: 32px;
+		margin-top: 32px;
+		margin-bottom: 40px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: calc(0.5* var(--padding-22));
@@ -267,6 +263,8 @@ h2 {
 
 	text-align: center;
 	padding-inline: 12px;
+	text-wrap: pretty;
+	font-family: var(--decorative-font);
 
 	font-size: calc(0.6* var(--base-size));
 }
@@ -304,16 +302,14 @@ h2 {
 	}
 
 	.text-media {
-		display: flex;
-		flex-direction: column;
-		background-color: var(--background-color);
-		justify-content: center;
-		gap: 12px;
-
-		text-align: center;
-		padding-inline: 12px;
-
 		font-size: var(--base-size);
+	}
+
+	.list-open {
+		&>section {
+			margin-top: 32px;
+			margin-bottom: 40px;
+		}
 	}
 }
 
@@ -344,6 +340,29 @@ h2 {
 
 @media (min-width:1024px) {
 
+	.list-open {
+		&>section {
+			margin-top: 40px;
+			margin-bottom: 60px;
+			grid-template-columns: repeat(4, 1fr);
+
+			& img,
+			.text-media {
+				border: 2px solid var(--black);
+				border-radius: 18px;
+			}
+		}
+	}
+
+	.list-1,
+	.list-2,
+	.list-3,
+	.list-4 {
+		&.open section {
+			padding-bottom: 0px;
+		}
+	}
+
 	h2 {
 		font-size: 40px;
 		width: fit-content;
@@ -364,6 +383,7 @@ h2 {
 	}
 
 	.h2-blocks {
+		padding-top: 50px;
 		border: 4px solid var(--black);
 	}
 
@@ -374,7 +394,12 @@ h2 {
 	.h2-creations {
 		margin-block: 300px;
 	}
+
+	.text-media {
+		font-size: 20px;
+	}
 }
+
 
 @media (min-width:1400px) {
 

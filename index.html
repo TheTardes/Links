@@ -66,7 +66,7 @@
 				<p>Guides</p>
 			</span>
 			<picture class="mask-container block-img"><img class="img-contain" src="Assets/smile.png"></picture>
-			<h1 id="channel-title" class="h1-grid">
+			<h1 class="h1-grid">
 				Risograph
 			</h1>
 			<picture class="mask-container block-img"><img class="mask-shape1  img-contain" src="Assets/shapes.png"></picture>
@@ -77,7 +77,7 @@
 			<picture class="mask-container block-img"><img class="mask-shape2 img-contain" src="Assets/art.png"></picture>
 			<p class="textlink-block"> Samples</p>
 			<span class="info-block">
-				<p>42 blocks of material</p>
+				<p><span id="channel-count"></span> blocks of resource</p>
 			</span>
 		</figure>
 
@@ -89,8 +89,7 @@
 		<section class="h2-print">
 			<h2 class="h2-rotate-1">Find Random Resource</h2>
 			<section class="print-blocks mask-container">
-				<button onclick="play()" class="button" onclick="printRandomBlock()">Print</button>
-				<audio controls src="/Assets/printer-sound.MP3"></audio>
+				<button class="button" onclick="printRandomBlock()">Print</button>
 				<div id="slot">
 					<div id="paper-holder">
 						<div id="paper">
@@ -213,7 +212,7 @@
 
 	<footer>
 		<section>
-			<p id="channel-title" ></p>
+			<h3 id="channel-title" ></h3>
 			<p id="channel-description" ></p>
 		</section>
 		<section>

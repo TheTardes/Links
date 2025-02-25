@@ -12,14 +12,13 @@ let placeChannelInfo = (data) => {
 	let channelTitle = document.querySelector('#channel-title')
 	let channelDescription = document.querySelector('#channel-description')
 	let channelCount = document.querySelector('#channel-count')
-	let channelLink = document.querySelector('#channel-link')
 
 	// Then set their content/attributes to our data:
 	channelTitle.innerHTML = data.title
 	channelDescription.innerHTML = window.markdownit().render(data.metadata.description) // Converts Markdown → HTML
 	channelCount.innerHTML = data.length
-	channelLink.href = `https://www.are.na/channel/${channelSlug}`
 }
+
 
 let blocks = []
 
@@ -50,17 +49,33 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 		blocks = data.contents;
 		insertBlocks();
-		data.contents.forEach(block => {
+
+		let blocksWithImages = blocks.filter(block=>block.class==='Image')
+		blocksWithImages.forEach(block => {
 			renderBlock(block)
 		});
+
+		placeChannelInfo(data)
 	})
 
-	
+
+
+
+
+	// audio play - for button source: https://stackoverflow.com/questions/9419263/how-to-play-audio
+
+	var audio = new Audio('/Assets/printer-sound.mp3');
+
+	function play() {
+		audio.currentTime=0;
+		audio.play();
+	  }
 
 // printing
 // source https://jsfiddle.net/9FfKZ/4/
 
 let printRandomBlock = () => {
+	play()
 	// get elements
 	let paperHolder = document.querySelector("#paper-holder");
 	let paper = document.querySelector("#paper");
@@ -69,8 +84,8 @@ let printRandomBlock = () => {
 	paperHolder.classList.remove("print");
 
 	// check if paper is already printed, if so add timeout for reset
-	let timeout = 0;
-	if (paper.innerHTML.trim()) timeout = 1000;
+	let timeout = 2000;
+	if (paper.innerHTML.trim()) timeout = 3000;
 	setTimeout(() => {
 
 		// let randomBlock = blocks[3];
@@ -89,6 +104,8 @@ let printRandomBlock = () => {
 		paperHolder.classList.add("print");
 	}, timeout);
 };
+
+
 
 // modal
 
@@ -236,6 +253,12 @@ let insertBlocks = () => {
 };
 
 
+
+
+
+
+
+
 //   this is something I took form internet - will add source later closed the tabs
 let openItems = () => {
 	let ul = document.querySelector(".list");
@@ -250,11 +273,3 @@ let openItems = () => {
 openItems();
 
 
-// audio play - for button source: https://stackoverflow.com/questions/9419263/how-to-play-audio
-// this souces gives 
-
-
-function play() {
-	var audio = new Audio('https:///Users/inji/Desktop/printer-sound.MP3');
-	audio.play();
-  }
