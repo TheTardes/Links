@@ -50,10 +50,11 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		blocks = data.contents;
 		insertBlocks();
 
-		let blocksWithImages = blocks.filter(block=>block.class==='Image')
-		blocksWithImages.forEach(block => {
-			renderBlock(block)
-		});
+// Data for collection-all:
+
+		[6,7,29,31,32,35,39,20,40,42,44,43].forEach(index => {
+			renderBlock(blocks[index])
+		})
 
 		placeChannelInfo(data)
 	})
