@@ -143,7 +143,7 @@ let insertBlockintoModal = (block) => {
 		modalContent.innerHTML = `<div class="modal-image">
 		<h3>${block.title}</h3>
 		<p  class="margin" id="modal-p">${block.content}</p>
-		<a href="https://www.are.na/block/${block.id}" class="button"> view original <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
+		<a href="https://www.are.na/block/${block.id}" class="button"> read on arena <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
 				<g clip-path="url(#clip0_82_41092)">
 					<path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
 				</g>
@@ -161,7 +161,7 @@ let insertBlockintoModal = (block) => {
 		<h3>${block.title}</h3>
 		<p id="modal-text"> ${block.description || ""}</p>
 		<img class="margin" src="${block.image.original.url}" />
-		<a href="https://www.are.na/block/${block.id}" class="button"> go to website <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
+		<a href="https://www.are.na/block/${block.id}" class="button"> go to link <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
 				<g clip-path="url(#clip0_82_41092)">
 					<path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" /></g>
 				<defs>
@@ -173,12 +173,13 @@ let insertBlockintoModal = (block) => {
 		</div>`;
 	}
 
-	else if (block.class === "Attachment") {
+	else if (block.class === 'Attachment') {
+		
 		modalContent.innerHTML = `<div class="modal-image">
 		<h3>${block.title}</h3>
 		<img class="margin" src="${block.image.original.url}" />
 		<p id="modal-text"> ${block.description || ""}</p>
-		<a href="https://www.are.na/block/${block.id}" class="button"> see full pdf <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
+		<a href="https://www.are.na/block/${block.id}" class="button"> retrieve <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
 			<g clip-path="url(#clip0_82_41092)"><path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
 				</g>
 				<defs>
@@ -190,22 +191,6 @@ let insertBlockintoModal = (block) => {
 		</div>`;
 	}
 
-	else if (block.class === "audio") {
-		modalContent.innerHTML = `<div class="modal-image">
-		<h3>${block.title}</h3>
-		<img class="margin" src="${block.image.original.url}" />
-		<p id="modal-text"> ${block.description || ""}</p>
-		<a href="https://www.are.na/block/${block.id}" class="button"> see full pdf <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none">
-			<g clip-path="url(#clip0_82_41092)"><path d="M32.5 23.0002C54.9525 26.9752 56.7376 24.1277 79.4001 25.5977M69.0826 42.0077C75.4851 33.1027 86.2576 32.2277 93.9326 25.0702C86.5476 21.9752 71.8601 15.0127 67.1951 7.99268" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-				</g>
-				<defs>
-					<clipPath id="clip0_82_41092">
-						<rect width="50" height="100" fill="white" transform="matrix(0 1 -1 0 100 0)" />
-					</clipPath>
-				</defs>
-			</svg> </a>
-		</div>`;
-	}
 
 	else {
 		modalContent.innerHTML = `<div class="modal-image" >

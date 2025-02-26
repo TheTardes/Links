@@ -15,7 +15,6 @@
 	&>* {
 		margin-left: -2px !important;
 		margin-top: -2px !important;
-		background: var(--background-color);
 	}
 
 	& .h1-grid {
@@ -49,6 +48,7 @@
 
 .block-img {
 	display: flex;
+	background-color: var(--background-color);
 	padding-inline: var(--padding-blocks);
 }
 
@@ -65,10 +65,12 @@
 	padding-inline: var(--padding-blocks);
 	overflow: hidden;
 	font-size: var(--base-size);
+	background-color: var(--background-color);
 }
 
 .textlink-block {
 	display: flex;
+	background-color: var(--background-color);
 	justify-content: center;
 	align-items: center;
 
@@ -86,7 +88,8 @@
 	}
 
 	50% {
-		background-color: #C4E3EB;
+		background-color:#d2e9fb;
+;
 	}
 }
 
@@ -223,7 +226,7 @@
 	.textlink-block {
 		animation: none;
 		&:hover {
-			background-color: #C4E3EB;
+			background-color: #d2e9fb;
 		}
 
 		cursor: pointer;

@@ -40,20 +40,13 @@
 			<span class="info-block">
 				<p> Explore and find important stuff</p>
 			</span>
-			<p class="textlink-block">About</p>
+			<a href="#footer" class="textlink-block">About</a>
 			<!-- source: https://codepen.io/crownedfoxes/pen/LYXMBEZ -->
-			<div class="mask-container">
-				<div class='mask'>
-					<svg height="400" width="400">
-						<circle cx="245" cy="220" r="100" fill="#0078BE" class='multiply' />
-						<circle cx="120" cy="220" r="100" fill="#05AA93" class='multiply' />
-						<circle cx="180" cy="120" r="100" fill="#F984CA" class='multiply' />
-					</svg>
-				</div>
+			<picture class="mask-container block-img"><img class="mask-shape1 img-contain" src="Assets/circles.png"></picture>
 			</div>
 			<picture class="mask-container block-img"><img class="mask-shape1 img-contain" src="Assets/slime.png"></picture>
-			<a class=" textlink-block">
-				<p>Learn</p>
+			<a href="#random" class=" textlink-block">
+				<p>Random Sources</p>
 			</a>
 			<picture class="mask-container block-img"><img class="img-contain" src="Assets/smile.png"></picture>
 			<h1 class="h1-grid">
@@ -63,9 +56,9 @@
 			<span class="info-block">
 				<p> Riso is a printing method</p>
 			</span>
-			<p class="textlink-block">Groups</p>
+			<a href="#learning" class="textlink-block">Learn</a>
 			<picture class="mask-container block-img"><img class="mask-shape2 img-contain" src="Assets/art.png"></picture>
-			<p class="textlink-block"> Explore</p>
+			<a href="#art" class="textlink-block"> Art</a>
 			<span class="info-block">
 				<p><span id="channel-count"></span> blocks of resource</p>
 			</span>
@@ -76,7 +69,7 @@
 
 	<article class="background">
 
-		<section class="h2-print">
+		<section id="random" class="h2-print">
 			<h2 class="h2-rotate-1">Find Random Resource</h2>
 			<section class="print-blocks mask-container">
 				<button class="button" onclick="printRandomBlock()">Print</button>
@@ -98,7 +91,7 @@
 			</div>
 		</dialog>
 
-		<section class="h2-titles">
+		<section id="learning" class="h2-titles">
 			<h2 class="h2-rotate-2">Your Learning Journey</h2>
 			<section class="h2-blocks mask-container">
 				<ul class="list">
@@ -192,7 +185,7 @@
 			</section>
 		</section>
 
-		<section class="h2-creations">
+		<section id="art" class="h2-creations">
 			<h2 class="h2-rotate-1">Explore Creations</h2>
 			<figure id="channel-blocks" class="collection-all">
 			</figure>
@@ -200,24 +193,21 @@
 
 	</article>
 
-	<footer>
-		<section>
+	<footer id="footer">
+		<section class="description mask-container">
 			<h3 id="channel-title"></h3>
 			<p id="channel-description"></p>
 		</section>
+
 		<section>
-			<date>2025</date>
-
-			<section>
-				<p>
-					Website by: <span>Inji Mammadli</span>
-				</p>
-				<p>
-					Content by: <span>Rice Gallardo</span>
-				</p>
-			</section>
-
+			<p>
+				Website by: <span>Inji Mammadli</span>
+			</p>
+			<p>
+				Content by: <span>Rice Gallardo</span>
+			</p>
 		</section>
+
 	</footer>
 </body>
 

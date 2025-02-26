@@ -8,7 +8,6 @@
 	color: var(--black);
 	--white: #ffffff;
 	--background-color: #EAE9E5;
-	background-color: var(--background-color);
 	--primary-color: #0078BE;
 	--pink: #F984CA;
 	--aqua: #5EC8E5;
@@ -32,11 +31,15 @@
 
 }
 
-
+html {
+	scroll-behavior: smooth;
+}
 
 h1 {
 	font-family: var(--decorative-font);
 	color: var(--primary-color);
+	text-shadow:1px 2px 2px #085794;
+	/* -webkit-text-stroke: 6px var(--white); */
 	line-height: 60px;
 	font-size: 44px;
 	display: flex;
@@ -62,28 +65,6 @@ nav {
 }
 
 
-
-.description {
-	margin-inline: var(--padding-blocks);
-	padding-inline: var(--padding-22);
-	padding-block: calc(2*var(--base-size));
-	margin-block: calc(3.5*var(--base-size));
-
-	border-radius: var(--radius);
-
-	border: 2px solid var(--black);
-
-	p {
-
-		font-size: 24px;
-		line-height: 38px;
-		text-transform: none;
-		font-weight: 400;
-		text-wrap: pretty;
-
-	}
-
-}
 
 .button {
 	color: var(--white);
@@ -146,22 +127,57 @@ nav {
 
 footer {
 	display: flex;
-	justify-content: space-between;
-	padding: var(--padding-blocks);
+	flex-direction: column;
+	gap: calc(2* var(--button-size));
 
-	& p{
+	.description {
+		margin-inline: var(--padding-blocks);
+		padding-inline: var(--padding-22);
+		padding-top: 40px;
+		padding-bottom: 22px;
+
+		border-radius: var(--radius);
+
+		border: 2px solid var(--black);
+
+
+		& p {
+			text-transform: none;
+			text-wrap: pretty;
+			word-break: break-word;
+			white-space: pre-wrap;
+			font-weight: 300;
+		}
+
+		& h3 {
+			padding-bottom: var(--base-size);
+		}
+	}
+
+
+	&>:nth-child(2) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		gap: var(--base-size);
 		text-transform: none;
+
+		margin-bottom: var(--button-size);
+
+		margin-inline: var(--padding-blocks);
+
+		& span {
+			font-weight: 700;
+			text-wrap: pretty;
+		}
 	}
 }
 
-/* .background {
-	background-color: #fff;
-	background-image:
-		linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-		linear-gradient(#eee .1em, transparent .1em);
-	background-size: 100% 1.2em;
-} */
-
+html {
+	background-color:#ddecf8;
+	background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+}
 
 
 
@@ -172,15 +188,13 @@ footer {
 		line-height: 90px;
 	}
 
-	.description {
-
-		padding: calc(3* var(--base-size));
-		margin-block: calc(8*var(--base-size));
-		border: 3px solid var(--black);
-
-		p {
-			font-size: 40px;
-			line-height: 58px;
+	footer {
+		& .description {
+			margin-top: 80px;
+			padding-inline: 44px;
+			padding-top: 44px;
+			padding-bottom: 30px;
+			border: 3px solid var(--black);
 		}
 	}
 
@@ -209,33 +223,25 @@ footer {
 	}
 
 
-	.description {
-		p {
-			font-size: 40px;
-			line-height: 60px;
+	footer {
+		&>:nth-child(2) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
 		}
-
-	}
-
-	.description {
-		padding: calc(2* var(--base-size));
-		margin-block: calc(8*var(--base-size));
-
 	}
 
 }
 
 @media (min-width:1024px) {
-	.description {
-		border: 4px solid var(--black);
-		padding: 80px;
 
-		p {
-			font-size: 40px;
-			line-height: 60px;
+	footer {
+		& .description {
+			margin-top: 100px;
+			border: 4px solid var(--black);
 		}
-
 	}
+
 
 	.button {
 		height: 70px;
@@ -247,10 +253,8 @@ footer {
 
 		}
 	}
-
-
-
 }
+
 
 
 @media (min-width:1400px) {
@@ -272,22 +276,14 @@ footer {
 		line-height: 180px;
 	}
 
-	.description {
-		border: 6px solid var(--black);
-		padding: 120px;
-
-		p {
-			font-size: 60px;
-			line-height: 80px;
-		}
-
-	}
 
 }
 
 @media(min-width:1600px) {
-	.description {
-		margin-inline: 0px;
+	footer {
+		& .description {
+			margin-inline: 0px;
+		}
 	}
 
 	nav {
