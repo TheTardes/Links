@@ -117,18 +117,19 @@ I adapted the main function ro my styles */
 @media (min-width:1400px) {
 
 	:root {
-		--paper-height: 500px;
+		--paper-height: 400px;
 	}
 
 	#slot {
 		width: 700px;
+		height: 10px;
 	}
 
 	.print-blocks {
+		height: 300px;
 		width:1170px;
 		border: 4px solid var(--black);
 		margin-inline: auto;
-		margin-bottom: calc(1.3* var(--paper-height));
-
 	}
+
 }

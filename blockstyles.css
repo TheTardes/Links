@@ -65,7 +65,6 @@
 	padding-inline: var(--padding-blocks);
 	overflow: hidden;
 	font-size: var(--base-size);
-	/* I will look at it later */
 }
 
 .textlink-block {
@@ -77,12 +76,18 @@
 	font-family: var(--decorative-font);
 	text-align: center;
 
-	&:hover{
-		background-color: var(--turqouise);
-		color: var(--white);
+	animation: flicker 3s linear infinite;
+}
+
+
+@keyframes flicker {
+	0%,100% {
+		background-color: var(--background-color)
 	}
 
-	cursor: pointer;
+	50% {
+		background-color: #C4E3EB;
+	}
 }
 
 
@@ -97,11 +102,6 @@
 		border-radius: var(--radius);
 		border: 1px solid var(--black);
 	}
-
-	& li * {
-		max-width: 100%;
-	}
-
 	& picture {
 		overflow: hidden;
 
@@ -166,6 +166,7 @@
 		--button-size: 28px;
 		font-size: var(--base-size);
 	}
+
 	.info-block {
 		font-size: 26px;
 	}
@@ -179,6 +180,7 @@
 		font-size: var(--base-size);
 		--radius: 32px;
 	}
+
 	.info-block {
 		font-size: 32px;
 	}
@@ -191,6 +193,7 @@
 		font-size: var(--base-size);
 		--radius: 44px;
 	}
+
 	.grid-pattern {
 		grid-template-columns: repeat(6, 1fr);
 
@@ -213,7 +216,17 @@
 
 		&>* {
 			border: 2px solid var(--black);
+			border-radius: 16px;
 		}
+	}
+
+	.textlink-block {
+		animation: none;
+		&:hover {
+			background-color: #C4E3EB;
+		}
+
+		cursor: pointer;
 	}
 }
 

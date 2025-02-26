@@ -54,8 +54,7 @@ h2 {
 	flex-direction: column;
 
 	gap: calc(2* var(--base-size));
-	margin-bottom: var(--padding-22);
-	margin-top: calc(4*var(--padding-22));
+	margin-block: 100px;
 }
 
 /* list */
@@ -270,14 +269,17 @@ h2 {
 }
 
 @media (min-width:500px) {
+	.h2-titles {
+		margin-bottom: 200px;
+	}
 
 	h2 {
 		width: 500px;
 		align-self: center;
 	}
 
-	.h2-titles .h2-print {
-		margin-bottom: 100px;
+	.h2-print {
+		margin-bottom: 40px;
 	}
 
 	.h2-print {
@@ -310,6 +312,10 @@ h2 {
 			margin-top: 32px;
 			margin-bottom: 40px;
 		}
+	}
+
+	.h2-creations {
+		margin-bottom: 100px;
 	}
 }
 
