@@ -8,7 +8,7 @@ This project was developed as part of the Typography and Interaction class at Pa
 
 ## Features
 
-- **Three Learning Paths:** The project introduces three distinct ways to learn:
+- **Three Learning Paths:
   - **Random Resource Choice**: Discover resources randomly.
   - **Art Exploration**: Dive into various art forms.
   - **Planned Guide**: Follow a structured approach for learning, making, and creating Risographs.
@@ -19,6 +19,8 @@ This project was developed as part of the Typography and Interaction class at Pa
 - **HTML**
 - **CSS**
 
+
+“If you’re curious about Risograph printing and creative learning paths, this project is your guide. Start your journey today!”
 
 
 
