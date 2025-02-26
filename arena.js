@@ -85,7 +85,7 @@ let printRandomBlock = () => {
 
 	// check if paper is already printed, if so add timeout for reset
 	let timeout = 2000;
-	if (paper.innerHTML.trim()) timeout = 3000;
+	if (paper.innerHTML.trim()) timeout = 2000;
 	setTimeout(() => {
 
 		// let randomBlock = blocks[3];
