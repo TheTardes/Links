@@ -22,7 +22,7 @@ This project was developed as part of the Typography and Interaction class at Pa
 - **Interactive Design & Coding Sketching**
 
 
-##What I Learned
+## What I Learned
 
 - Bridging Concept & Code: This project challenged me to translate abstract ideas into an interactive experience, reinforcing the balance between creativity and usability.
 - API Integration & Dynamic Content
