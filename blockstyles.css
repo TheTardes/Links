@@ -79,6 +79,8 @@
 	text-align: center;
 
 	animation: flicker 3s linear infinite;
+
+	cursor: pointer;
 }
 
 
