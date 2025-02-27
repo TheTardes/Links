@@ -64,7 +64,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 
 	// audio play - for button source: https://stackoverflow.com/questions/9419263/how-to-play-audio
 
-	var audio = new Audio('/Assets/printer-sound.mp3');
+	var audio = new Audio('Assets/printer-sound.mp3');
 
 	function play() {
 		audio.currentTime=0;
